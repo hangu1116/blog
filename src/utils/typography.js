@@ -18,6 +18,9 @@ Wordpress2016.overrideThemeStyles = () => {
       fontWeight:'400',
       fontSize: 24,
       letterSpacing:0,
+    },
+    body:{
+
     }
   }
 }

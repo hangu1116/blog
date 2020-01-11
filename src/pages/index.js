@@ -7,6 +7,23 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
+  renderTags(tags) {
+    // console.log(tags);
+    // debugger;
+    if(!tags || tags.length===0){
+      return null;
+    }else{
+      return (
+        <div>
+          {
+            tags.map(tag => (
+              <div style={styles.tagBody}>{tag}</div>
+            ))
+          }
+        </div>
+      )
+    }
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -32,7 +49,12 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h4>
-                <small style={{color:'#cccccc'}}>{node.frontmatter.date}</small>
+                <div style={styles.articleInfo}>
+                  <small style={{color:'#cccccc'}}>{node.frontmatter.date}</small>
+                  {
+                    this.renderTags(node.frontmatter.tags, node.fields.slug)
+                  }
+                </div>
               </header>
               <section>
                 <p
@@ -54,6 +76,24 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 const styles = {
+  articleInfo:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+  },
+  tagBody:{
+    display:'flex',
+    flex:0,
+    marginLeft:8,
+    alignItems:'center',
+    height:15,
+    fontSize:12,
+    color:'#ffffff',
+    backgroundColor:'#cccccc',
+    borderRadius:4,
+    paddingLeft:6,
+    paddingRight:6,
+  },
   articleLine:{
     height:1,
     width:'106%',
@@ -61,7 +101,7 @@ const styles = {
     marginTop:'40px',
     backgroundColor:'#e8e8e8',
   },
-};
+}
 
 export const pageQuery = graphql`
   query {
@@ -78,8 +118,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
+            tags
             description
           }
         }
