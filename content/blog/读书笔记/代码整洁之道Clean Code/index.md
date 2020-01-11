@@ -2,7 +2,8 @@
 title: 代码整洁之道Clean Code
 date: "2019-11-23T22:12:03.284Z"
 description: "Robert C. Martin马丁 著"
-tags: ["读书笔记"]
+tags: ["读书笔记","计算机"]
+type: reading
 ---
 Test Driven Development，测试驱动开发
 

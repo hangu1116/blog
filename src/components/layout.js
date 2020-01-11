@@ -10,14 +10,23 @@ class Layout extends React.Component {
     let header
 
     header = (
+      <div style={{display:'flex', flexDirection:"row",justifyContent:"space-between"}}>
+        <h5
+          style={styles.title}
+        >
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/info`}
+          >
+            {'About me'}
+          </Link>
+        </h5>
       <h5
-        style={{
-          fontFamily: `PingFang, YaHei, Montserrat, sans-serif`,
-          marginTop: 0,
-          fontWeight: '400',
-          color:'#cccccc',
-          textAlign: 'center',
-        }}
+        style={styles.title}
       >
         <Link
           style={{
@@ -27,9 +36,24 @@ class Layout extends React.Component {
           }}
           to={`/`}
         >
-          {title}
+          {title||'home'}
         </Link>
       </h5>
+        <h5
+          style={styles.title}
+        >
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/tags`}
+          >
+            tags
+          </Link>
+        </h5>
+      </div>
     )
     return (
       <div
@@ -41,12 +65,13 @@ class Layout extends React.Component {
           fontFamily: 'PingFang',
           fontWeight: '400'
         }}
+        onbeforecopy='return false'
+        oncontextmenu='return false'
       >
         <header>{header}</header>
         <main>{children}</main>
         <footer style={{color: '#cccccc', fontSize:14, marginTop:80}}>
-          © {new Date().getFullYear()}, Write by cyj, Built with
-          {` Gatsby`}
+          © {new Date().getFullYear()}, Write by cyj
         </footer>
       </div>
     )
@@ -54,3 +79,13 @@ class Layout extends React.Component {
 }
 
 export default Layout
+
+const styles={
+  title:{
+    fontFamily: `PingFang, YaHei, Montserrat, sans-serif`,
+    marginTop: 0,
+    fontWeight: '400',
+    color:'#cccccc',
+    textAlign: 'center',
+  }
+}

@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
       return null;
     }else{
       return (
-        <div>
+        <div style={{display:'flex', flexDirection:'row'}}>
           {
             tags.map(tag => (
               <div style={styles.tagBody}>{tag}</div>
@@ -47,6 +47,9 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h3>
+            {
+              post.frontmatter.type==='reading'&&<p style={styles.writer}>{post.frontmatter.description}</p>
+            }
             <div style={styles.articleInfo}>
               {
                 this.renderTags(post.frontmatter.tags)
@@ -108,6 +111,10 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 const styles = {
+  writer:{
+    fontFamily: 'Times New Roman, serif',
+    marginTop:8
+  },
   articleInfo:{
     display:'flex',
     flexDirection:'row',
@@ -117,7 +124,7 @@ const styles = {
   },
   tagBody:{
     display:'flex',
-    flex:0,
+    // flex:0,
     marginRight:8,
     alignItems:'center',
     height:15,
@@ -143,8 +150,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         tags
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD W")
         description
+        type
       }
     }
   }

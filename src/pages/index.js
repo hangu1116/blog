@@ -14,13 +14,24 @@ class BlogIndex extends React.Component {
       return null;
     }else{
       return (
-        <div>
+        <div style={styles.articleInfo}>
           {
             tags.map(tag => (
               <div style={styles.tagBody}>{tag}</div>
             ))
           }
         </div>
+      )
+    }
+  }
+  renderWriter(model) {
+    // console.log(tags);
+    // debugger;
+    if(!model || !model.description || !model.type || model.type!=='reading'){
+      return null;
+    }else{
+      return (
+        <span style={styles.writer}>{model.description+'    |'}</span>
       )
     }
   }
@@ -50,20 +61,26 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h4>
                 <div style={styles.articleInfo}>
+                  {
+                    this.renderWriter(node.frontmatter)
+                  }
                   <small style={{color:'#cccccc'}}>{node.frontmatter.date}</small>
                   {
-                    this.renderTags(node.frontmatter.tags, node.fields.slug)
+                    this.renderTags(node.frontmatter.tags)
                   }
                 </div>
               </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                  style={{fontSize:14}}
-                />
-              </section>
+              {
+                node.frontmatter.type!=='reading'&&
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                    style={{fontSize:14}}
+                  />
+                </section>
+              }
               <div style={styles.articleLine} />
             </article>
           )
@@ -83,7 +100,7 @@ const styles = {
   },
   tagBody:{
     display:'flex',
-    flex:0,
+    // flex:0,
     marginLeft:8,
     alignItems:'center',
     height:15,
@@ -93,6 +110,11 @@ const styles = {
     borderRadius:4,
     paddingLeft:6,
     paddingRight:6,
+  },
+  writer:{
+    marginRight:10,
+    fontSize:12,
+    color:'#cccccc'
   },
   articleLine:{
     height:1,
@@ -121,6 +143,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             title
             tags
+            type
             description
           }
         }

@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -9,25 +10,22 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
     } tagged with "${tag}"`
   return (
-    <div>
+    <Layout>
       <h1>{tagHeader}</h1>
-      <ul>
+      <div>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
-            <li key={slug}>
+            <p key={slug}>
               <Link to={slug}>{title}</Link>
-            </li>
+            </p>
           )
         })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
-    </div>
+      </div>
+
+      {/*<Link to="/tags">All tags</Link>*/}
+    </Layout>
   )
 }
 Tags.propTypes = {

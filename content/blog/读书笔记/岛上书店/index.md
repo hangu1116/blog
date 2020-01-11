@@ -1,7 +1,9 @@
 ---
 title: 岛上书店
 date: "2019-02-08T22:12:03.284Z"
-description: "加布瑞埃拉·泽文 著"
+description: "加布瑞埃拉·泽文Gabrielle Zevin 著 孙仲旭 译"
+tags: ["读书笔记", "非计算机"]
+type: reading
 ---
 
 
