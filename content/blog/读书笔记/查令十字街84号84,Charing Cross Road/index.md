@@ -1,4 +1,5 @@
 ---
+lock: true
 title: 查令十字街84号84,Charing Cross Road
 date: "2019-02-14T22:12:03.284Z"
 description: "海莲·汉芙Helene Hanff 著 陈建铭 译"

@@ -1,4 +1,5 @@
 ---
+lock: true
 title: 孤独是生命的礼物
 date: "2019-02-24T22:12:03.284Z"
 description: "周国平 等 著"

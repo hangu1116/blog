@@ -1,4 +1,5 @@
 ---
+lock: true
 title: 蓝房子
 date: "2018-05-29T22:12:03.284Z"
 description: "北岛 著"

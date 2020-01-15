@@ -10,29 +10,26 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                tags
-                type
-              }
-            }
-          }
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000, filter: {frontmatter: {lock: {ne: true}}}) {
+    edges {
+      node {
+        fields {
+          slug
         }
-        tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
-          fieldValue
+        frontmatter {
+          title
+          tags
+          type
         }
       }
-      }
+    }
+  }
+  tagsGroup: allMarkdownRemark(limit: 2000) {
+    group(field: frontmatter___tags) {
+      fieldValue
+    }
+  }
+}
     `
   )
 

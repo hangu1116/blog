@@ -1,4 +1,5 @@
 ---
+lock: true
 title: 穆斯林的葬礼
 date: "2019-02-01T22:12:03.284Z"
 description: "霍达 著"

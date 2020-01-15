@@ -1,4 +1,5 @@
 ---
+lock: true
 title: 北欧现代诗选
 date: "2018-11-03T22:12:03.284Z"
 description: "索德格朗 等著 北岛 译"
