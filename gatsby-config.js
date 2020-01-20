@@ -34,6 +34,26 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-mermaid',
+            options: {
+              language: 'mermaid',
+              theme: 'neutral',
+              viewport: {
+                width: 200,
+                height: 200
+              },
+            }
+          },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: true,
+              fromHeading: 1,
+              toHeading: 6
+            },
+          },
           `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
@@ -73,22 +93,6 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: true,
-              fromHeading: 1,
-              toHeading: 6
-            },
-          }
-        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

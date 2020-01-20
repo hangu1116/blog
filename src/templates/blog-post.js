@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+// import { nodes, connections } from './my-map.json'
 
 class BlogPostTemplate extends React.Component {
   renderTags(tags) {
@@ -28,7 +29,22 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    const nodes=[{
+      "text": "python",
+      "url": "http://www.wikiwand.com/en/Python_(programming_language)",
+      "fx": -13.916222252976013,
+      "fy": -659.1641376795345,
+      "category": "wiki",
+      "note": ""
+    }];
+    const connections=[{
+      "source": "python",
+      "target": "basics",
+      "curve": {
+        "x": -43.5535,
+        "y": 299.545
+      }
+    }]
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -66,6 +82,10 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
+          {/*<MindMap*/}
+          {/*  nodes={nodes}*/}
+          {/*  connections={connections}*/}
+          {/*/>*/}
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{

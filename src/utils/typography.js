@@ -24,13 +24,13 @@ Wordpress2016.overrideThemeStyles = () => {
     'section h3':{
       fontFamily: `PingFang, YaHei`,
       fontSize: 34,
-      fontWeight:'700',
+      fontWeight:'400',
       marginTop:0,
       marginBottom: '6px' ,
     },
     'h4':{
       fontFamily: 'PingFang, YaHei',
-      fontWeight:'500',
+      fontWeight:'400',
       fontSize: 24,
       letterSpacing:0,
       // marginTop:0,
