@@ -107,7 +107,7 @@ const styles = {
     fontSize:12,
     color:'#ffffff',
     backgroundColor:'#cccccc',
-    borderRadius:4,
+    borderRadius:10,
     paddingLeft:6,
     paddingRight:6,
   },

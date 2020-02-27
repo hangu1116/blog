@@ -8,6 +8,18 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import { rhythm } from "../utils/typography"
+
+const getTagIcon = (value) => {
+  switch(value){
+    case '计算机':
+      return '👨🏻‍💻计算机/ Computer';
+    case '读书笔记':
+      return '👨🏻‍🎓读书笔记/ Reading';
+    default:
+      return value;
+  }
+}
 
 const TagsPage = ({
                     data: {
@@ -20,12 +32,14 @@ const TagsPage = ({
   <Layout>
     <Helmet title={title} />
     <div>
-      <h1>Tags标签</h1>
+      <h4 style={{
+        fontSize: 24,
+      }}>Tags</h4>
       <ul>
         {group.map(tag => (
           <p key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              # {getTagIcon(tag.fieldValue)} ({tag.totalCount})
             </Link>
           </p>
         ))}
@@ -55,17 +69,20 @@ TagsPage.propTypes = {
 export default TagsPage
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+  {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
+  }
+  allMarkdownRemark(limit: 2000, filter: {frontmatter: {lock: {ne: true}}}) {
+    group(field: frontmatter___tags) {
+      fieldValue
+      totalCount
+      nodes {
+        id
       }
     }
   }
+}
 `

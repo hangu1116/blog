@@ -2,6 +2,7 @@
 title: 现代前端技术解析
 date: "2019-04-27T22:12:03.284Z"
 description: "张成文 著"
+type: reading
 ---
 ```toc
 exclude:TableofContents
