@@ -67,6 +67,9 @@ Wordpress2016.overrideThemeStyles = () => {
     '.toc li':{
       listStyleType:'none',
       underline:'none',
+    },
+    'pre': {
+      fontSize: '0.84em !important',
     }
   }
 }
