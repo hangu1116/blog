@@ -54,7 +54,7 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author}</strong>，一个前端程序员，喜欢画画、摄影、养多肉。
+        <strong>{author}</strong>，一个会画画的前端程序员👨🏻‍🎨👨🏻‍💻。
         {` `}
         {/*<a href={`https://twitter.com/${social.twitter}`}>*/}
         {/*</a>*/}

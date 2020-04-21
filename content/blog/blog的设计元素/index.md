@@ -14,7 +14,7 @@ date: "2020-01-11T14:21"
 ### 要做的功能
 - [p2]调色盘color
 - [p1]文章link功能
-- [p2]dark mode
++- [p2]dark mode
 - [p3]地图
 - [p1]checkbox
-- [p1]补全aboutme
++- [p1]补全aboutme

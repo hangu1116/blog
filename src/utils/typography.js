@@ -1,14 +1,15 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
+import '../style/global.css'
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
-    'h1, h5, h6': {
+    'h1': {
+      color: 'var(--titleText)',
       fontFamily: `PingFang, YaHei`,
-      // fontWeight:'400',
     },
     'h2':{
       fontFamily: `PingFang, YaHei`,
@@ -28,11 +29,12 @@ Wordpress2016.overrideThemeStyles = () => {
       marginTop:0,
       marginBottom: '6px' ,
     },
-    'h4':{
+    h4:{
       fontFamily: 'PingFang, YaHei',
       fontWeight:'400',
       fontSize: 24,
       letterSpacing:0,
+      color: 'var(--titleText)',
       // marginTop:0,
       // marginBottom:1,
     },
@@ -44,10 +46,22 @@ Wordpress2016.overrideThemeStyles = () => {
       marginTop:0,
       marginBottom: '6px',
     },
+    'h5': {
+      color: 'var(--titleText)',
+      fontFamily: `PingFang, YaHei`,
+      // fontWeight:'400',
+    },
+    'h6': {
+      color: 'var(--titleText)',
+      fontFamily: `PingFang, YaHei`,
+      // fontWeight:'400',
+    },
     body:{
       margin:0,
+      backgroundColor: 'var(--bg)',
     },
     p:{
+      color: 'var(--contentText)'
       // marginBlockEnd: '6px',
     },
     li:{
@@ -60,9 +74,9 @@ Wordpress2016.overrideThemeStyles = () => {
       marginTop:'2px',
     },
     a:{
-      color: '#187bff',
+      color: 'var(--linkText)',
       outline:'none',
-      boxShadow: `none`,
+      boxShadow: 'none',
     },
     '.toc li':{
       listStyleType:'none',

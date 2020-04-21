@@ -13,6 +13,7 @@ const Tags = ({ pageContext, data }) => {
         <span style={{
           fontSize: 24,
           display: 'flex',
+          color:'var(--titleText)'
         }}>{tagHeader}</span>
         <div style={{display: 'flex',height: '22px', width: '22px', borderRadius: '11px', backgroundColor: '#b3d7ff', justifyContent: 'center', alignItems:'center', marginLeft: '8px'}}>
           <span style={{display: 'flex',color: '#187bff', fontWeight:'500', lineHeight: '16px', fontSize: '16px'}}>{totalCount}</span>

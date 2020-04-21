@@ -29,22 +29,6 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    const nodes=[{
-      "text": "python",
-      "url": "http://www.wikiwand.com/en/Python_(programming_language)",
-      "fx": -13.916222252976013,
-      "fy": -659.1641376795345,
-      "category": "wiki",
-      "note": ""
-    }];
-    const connections=[{
-      "source": "python",
-      "target": "basics",
-      "curve": {
-        "x": -43.5535,
-        "y": 299.545
-      }
-    }]
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -58,7 +42,8 @@ class BlogPostTemplate extends React.Component {
                 marginTop: rhythm(5),
                 marginBottom: 0,
                 fontSize: 34,
-                fontWeight: '400'
+                fontWeight: '400',
+                color: 'var(--titleText)'
               }}
             >
               {post.frontmatter.title}
@@ -76,7 +61,7 @@ class BlogPostTemplate extends React.Component {
                 ...scale(-1 / 5),
                 display: `block`,
                 marginBottom: rhythm(1),
-                color:'#cccccc',
+                color:'var(--descText)',
               }}
             >
               {post.frontmatter.date}
@@ -86,15 +71,14 @@ class BlogPostTemplate extends React.Component {
           {/*  nodes={nodes}*/}
           {/*  connections={connections}*/}
           {/*/>*/}
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} style={{color:'var(--contentText)'}}/>
           <hr
             style={{
               marginBottom: rhythm(1),
+              color: 'var(--lineColor)'
             }}
           />
-          <footer>
-            {/*<Bio />*/}
-          </footer>
+          <footer/>
         </article>
 
         <nav>
@@ -133,7 +117,8 @@ export default BlogPostTemplate
 const styles = {
   writer:{
     fontFamily: 'Times New Roman, serif',
-    marginTop:8
+    marginTop:8,
+    color: 'var(--contentText)'
   },
   articleInfo:{
     display:'flex',
@@ -149,8 +134,8 @@ const styles = {
     alignItems:'center',
     height:15,
     fontSize:12,
-    color:'#ffffff',
-    backgroundColor:'#cccccc',
+    color:'var(--transportText)',
+    backgroundColor:'var(--descText)',
     borderRadius:4,
     paddingLeft:6,
     paddingRight:6,

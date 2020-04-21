@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -56,7 +55,7 @@ class BlogIndex extends React.Component {
                     fontSize: 24,
                   }}
                 >
-                  <Link style={{ boxShadow: `none`, color:'#333333' }} to={node.fields.slug}>
+                  <Link style={{ boxShadow: `none`, color:'var(--titleText)' }} to={node.fields.slug}>
                     {title}
                   </Link>
                 </h4>
@@ -64,7 +63,7 @@ class BlogIndex extends React.Component {
                   {
                     this.renderWriter(node.frontmatter)
                   }
-                  <small style={{color:'#cccccc'}}>{node.frontmatter.date}</small>
+                  <small style={{color:'var(--descText)'}}>{node.frontmatter.date}</small>
                   {
                     this.renderTags(node.frontmatter.tags)
                   }
@@ -77,7 +76,7 @@ class BlogIndex extends React.Component {
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}
-                    style={{fontSize:14}}
+                    style={{fontSize:14, color:'var(--titleText)'}}
                   />
                 </section>
               }
@@ -105,8 +104,8 @@ const styles = {
     alignItems:'center',
     height:15,
     fontSize:12,
-    color:'#ffffff',
-    backgroundColor:'#cccccc',
+    color: 'var(--transportText)',
+    backgroundColor: 'var(--descText)',
     borderRadius:10,
     paddingLeft:6,
     paddingRight:6,
@@ -114,14 +113,14 @@ const styles = {
   writer:{
     marginRight:10,
     fontSize:12,
-    color:'#cccccc'
+    color: 'var(--descText)',
   },
   articleLine:{
     height:1,
     width:'106%',
     marginLeft: '-3%',
     marginTop:'40px',
-    backgroundColor:'#e8e8e8',
+    backgroundColor: 'var(--lineColor)',
   },
 }
 

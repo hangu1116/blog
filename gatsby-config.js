@@ -76,6 +76,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
+    'gatsby-plugin-dark-mode',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -83,7 +84,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#0086F6`,
         display: `minimal-ui`,
         icon: `content/assets/avator.jpg`,
       },
