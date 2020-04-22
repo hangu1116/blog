@@ -1,0 +1,170 @@
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+/*
+  TODO: This was run through a SCSS compiler manually so that I can apply
+  dark mode styles. Need to figure out how to require a .scss file in
+  gatsby-browser.js.
+*/
+
+body[class='dark'] code[class*='language-'],
+body[class='dark'] pre[class*='language-'] {
+	color: #cdcdcd;
+	background: none;
+	font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+	monospace;
+	font-size: 1em;
+	line-height: 1.5;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	box-sizing: border-box;
+}
+body[class='dark'] pre[class*='language-']::selection,
+body[class='dark'] pre[class*='language-'] ::selection,
+body[class='dark'] code[class*='language-']::selection,
+body[class='dark'] code[class*='language-'] ::selection {
+	text-shadow: none;
+	background: #d84315;
+	color: #fff;
+}
+@media print {
+	body[class='dark'] code[class*='language-'],
+	body[class='dark'] pre[class*='language-'] {
+		text-shadow: none;
+	}
+}
+body[class='dark'] pre[class*='language-'] {
+	padding: 1rem;
+	overflow: auto;
+}
+body[class='dark'] .entry .entry-content .wp-block-code {
+	border-radius: 8px !important;
+	border: none;
+}
+body[class='dark'] :not(pre) > code[class*='language-'],
+body[class='dark'] pre[class*='language-'] {
+	background: #363636;
+}
+body[class='dark'] :not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+body[class='dark'] .token.comment,
+body[class='dark'] .token.prolog,
+body[class='dark'] .token.doctype,
+body[class='dark'] .token.cdata {
+	color: #717171;
+	/* mkaz: fix for unknown theme (Issue: #46) */
+	border: none;
+	/* mkaz: fix for Twenty Nineteen */
+	padding-left: 0;
+}
+body[class='dark'] .token.punctuation {
+	color: #abb2bf;
+}
+body[class='dark'] .token.selector,
+body[class='dark'] .token.tag {
+	color: #e06c75;
+}
+body[class='dark'] .token.property,
+body[class='dark'] .token.boolean,
+body[class='dark'] .token.number,
+body[class='dark'] .token.constant,
+body[class='dark'] .token.symbol,
+body[class='dark'] .token.attr-name,
+body[class='dark'] .token.deleted {
+	color: #d19a66;
+}
+body[class='dark'] .token.string,
+body[class='dark'] .token.char,
+body[class='dark'] .token.attr-value,
+body[class='dark'] .token.builtin,
+body[class='dark'] .token.inserted {
+	color: #98c379;
+}
+body[class='dark'] .token.operator,
+body[class='dark'] .token.entity,
+body[class='dark'] .token.url,
+body[class='dark'] .language-css .token.string,
+body[class='dark'] .style .token.string {
+	color: #56b6c2;
+}
+body[class='dark'] .token.atrule,
+body[class='dark'] .token.keyword {
+	color: #c678dd;
+}
+body[class='dark'] .token.function {
+	color: #61afef;
+}
+body[class='dark'] .token.regex,
+body[class='dark'] .token.important,
+body[class='dark'] .token.variable {
+	color: #c678dd;
+}
+body[class='dark'] .token.important,
+body[class='dark'] .token.bold {
+	font-weight: bold;
+}
+body[class='dark'] .token.italic {
+	font-style: italic;
+}
+body[class='dark'] .token.entity {
+	cursor: help;
+}
+body[class='dark'] pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+body[class='dark'] pre.line-numbers > code {
+	position: relative;
+}
+body[class='dark'] .line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em;
+	/* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+body[class='dark'] .line-numbers-rows > span {
+	pointer-events: none;
+	display: block;
+	counter-increment: linenumber;
+}
+body[class='dark'] .line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #5c6370;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+body[class='dark'] .prism-titlename {
+	margin-top: -8px !important;
+	margin-bottom: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-weight: bold;
+	color: orange;
+}

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `cyj's notebook`,
-    author: `Cui`,
-    description: `一个人的自留地.`,
+    title: `cyj's blog`,
+    author: `cyj`,
+    description: `blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `@想喝酸牛奶`,

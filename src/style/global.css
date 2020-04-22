@@ -11,9 +11,10 @@ body {
 body.dark {
     --bg: #121212;
     --linkText: #2a88d7;
-    --titleText: #e5e5e5;
+    --titleText: #cccccc;
     --contentText: #cbcbcb;
-    --descText: #636363;
+    /*--descText: #909090;*/
+    --descText: #666666;
     --transportText: #121212;
     --lineColor: #212121;
 }

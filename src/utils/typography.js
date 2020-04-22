@@ -2,7 +2,7 @@ import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 import '../style/global.css'
 
-Wordpress2016.overrideThemeStyles = () => {
+Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
@@ -84,7 +84,25 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     'pre': {
       fontSize: '0.84em !important',
-    }
+    },
+    // 引用
+    'blockquote':{
+      borderLeftColor: 'var(--lineColor)',
+      marginTop: rhythm(1),
+    },
+    'blockquote p':{
+      fontSize: '0.84em !important',
+    },
+    // 代码
+    // 行内代码
+    'code[class="language-text"]':{
+      // backgroundColor: 'var(--descText)',
+      // color: 'var(--transportText)',
+    },
+    img: {
+      maxWidth: '100%',
+    },
+
   }
 }
 

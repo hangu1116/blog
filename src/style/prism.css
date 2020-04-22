@@ -1,0 +1,170 @@
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+/*
+  TODO: This was run through a SCSS compiler manually so that I can apply
+  dark mode styles. Need to figure out how to require a .scss file in
+  gatsby-browser.js.
+*/
+
+code[class*='language-'],
+pre[class*='language-'] {
+	color: #323232;
+	background: none;
+	font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+	monospace;
+	font-size: 1em;
+	line-height: 1.5;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	box-sizing: border-box;
+}
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+	text-shadow: none;
+	background: #d84315;
+	color: #fff;
+}
+@media print {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		text-shadow: none;
+	}
+}
+pre[class*='language-'] {
+	padding: 1rem;
+	overflow: auto;
+}
+.entry .entry-content .wp-block-code {
+	border-radius: 8px !important;
+	border: none;
+}
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	background: #e8e8e8;
+}
+:not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #656565;
+	/* mkaz: fix for unknown theme (Issue: #46) */
+	border: none;
+	/* mkaz: fix for Twenty Nineteen */
+	padding-left: 0;
+}
+.token.punctuation {
+	color: #9599a0;
+}
+.token.selector,
+.token.tag {
+	color: #ff5460;
+}
+.token.property,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.attr-name,
+.token.deleted {
+	color: #ffa95b;
+}
+.token.string,
+.token.char,
+.token.attr-value,
+.token.builtin,
+.token.inserted {
+	color: #a9e87a;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #50cede;
+}
+.token.atrule,
+.token.keyword {
+	color: #e173ff;
+}
+.token.function {
+	color: #50cede;
+}
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e173ff;
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+pre.line-numbers > code {
+	position: relative;
+}
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em;
+	/* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.line-numbers-rows > span {
+	pointer-events: none;
+	display: block;
+	counter-increment: linenumber;
+}
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #5c6370;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+.prism-titlename {
+	margin-top: -8px !important;
+	margin-bottom: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-weight: bold;
+	color: orange;
+}
