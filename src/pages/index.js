@@ -52,7 +52,8 @@ class BlogIndex extends React.Component {
                 <h4
                   style={{
                     marginBottom: rhythm(1 / 4),
-                    fontSize: 24,
+                    fontSize: 'var(--h3Size)',
+                    fontWeight:'var(--medium)',
                   }}
                 >
                   <Link style={{ boxShadow: `none`, color:'var(--titleText)' }} to={node.fields.slug}>
@@ -76,7 +77,7 @@ class BlogIndex extends React.Component {
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}
-                    style={{fontSize:14, color:'var(--titleText)'}}
+                    style={{fontSize:14, color:'var(--contentText)', fontWeight:'var(--light)',marginTop:rhythm(1/3)}}
                   />
                 </section>
               }

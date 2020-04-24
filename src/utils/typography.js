@@ -13,38 +13,25 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     'h2':{
       fontFamily: `PingFang, YaHei`,
-      fontSize: 38,
-      fontWeight:'700',
+      fontSize: 'var(--h2Size)',
+      fontWeight:'var(--medium)',
       marginBottom:2,
     },
-    'h3':{
+    h3:{
       fontFamily: `PingFang, YaHei`,
-      fontWeight:'400',
-      fontSize: 34,
-    },
-    'section h3':{
-      fontFamily: `PingFang, YaHei`,
-      fontSize: 34,
-      fontWeight:'400',
-      marginTop:0,
-      marginBottom: '6px' ,
+      fontWeight:'var(--medium)',
+      fontSize: 'var(--h3Size)',
+      marginTop: '1.25em !important',
+      marginBottom: '1.25em !important',
     },
     h4:{
       fontFamily: 'PingFang, YaHei',
-      fontWeight:'400',
-      fontSize: 24,
+      fontWeight:'var(--medium)',
+      fontSize: 'var(--h4Size)',
       letterSpacing:0,
       color: 'var(--titleText)',
       // marginTop:0,
       // marginBottom:1,
-    },
-    'section h4':{
-      fontFamily: 'PingFang, YaHei',
-      fontWeight:'500',
-      fontSize: 32,
-      letterSpacing:0,
-      marginTop:0,
-      marginBottom: '6px',
     },
     'h5': {
       color: 'var(--titleText)',
@@ -92,12 +79,6 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     'blockquote p':{
       fontSize: '0.84em !important',
-    },
-    // 代码
-    // 行内代码
-    'code[class="language-text"]':{
-      // backgroundColor: 'var(--descText)',
-      // color: 'var(--transportText)',
     },
     img: {
       maxWidth: '100%',

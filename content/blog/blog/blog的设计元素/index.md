@@ -13,8 +13,10 @@ date: "2020-01-11T14:21"
 
 ### 要做的功能
 - [p2]调色盘color
-- [p1]文章link功能
+- [p1]related link
 +- [p2]dark mode
 - [p3]地图
 - [p1]checkbox
 +- [p1]补全aboutme
+
+![material tool](https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=90CAF9&secondary.color=F44336)
