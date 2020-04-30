@@ -1,0 +1,22 @@
+photo section p{
+    margin-bottom: 24em;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    text-align: right;
+    user-select: none;
+}
+photo section p img{
+    align-items: center;
+    user-select: none;
+}
+
+body[class='dark'] photo section p{
+    margin-bottom: 24em;
+    color: #979797;
+}
+
+photo section p *:last-child{
+    margin-bottom: 1em;
+}

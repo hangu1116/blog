@@ -30,7 +30,7 @@ body.dark {
     --titleText: #F2F2F7;
     --contentText: #cccccc;
     --infoText: #979797;
-    --descText: #999999;
+    --descText: #555555;
     --transportText: #121212;
     --lineColor: #212121;
     transition: color 0.2s ease-out, background 0.2s ease-out;

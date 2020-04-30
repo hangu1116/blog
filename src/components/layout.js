@@ -3,9 +3,13 @@ import { Link } from "gatsby"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { rhythm, scale } from "../utils/typography"
 
+export const LayoutType = {
+  PHOTO:1,
+}
+
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, type } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -104,9 +108,12 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer style={{color: 'var(--descText)', fontSize:14, marginTop:80}}>
-          © {new Date().getFullYear()}, Write by cyj
-        </footer>
+        {
+          type === LayoutType.PHOTO ? null :
+            <footer style={{color: 'var(--descText)', fontSize:14, marginTop:80}}>
+              © {new Date().getFullYear()}, Write by cyj
+            </footer>
+        }
       </div>
     )
   }

@@ -9,8 +9,6 @@ import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   renderTags(tags) {
-    // console.log(tags);
-    // debugger;
     if(!tags || tags.length===0){
       return null;
     }else{
