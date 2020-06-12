@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";margin:0;background-color:var(--bg);}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:var(--titleText);font-family:PingFang, YaHei;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:2;color:inherit;font-family:PingFang, YaHei;font-weight:var(--medium);text-rendering:optimizeLegibility;font-size:var(--h2Size);line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:1.25em !important;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.25em !important;color:inherit;font-family:PingFang, YaHei;font-weight:var(--medium);text-rendering:optimizeLegibility;font-size:var(--h3Size);line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:var(--titleText);font-family:PingFang, YaHei;font-weight:var(--medium);text-rendering:optimizeLegibility;font-size:var(--h4Size);line-height:1.1;letter-spacing:0;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:var(--titleText);font-family:PingFang, YaHei;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:var(--titleText);font-family:PingFang, YaHei;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:var(--contentText);}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.84em !important;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:1.75rem;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);border-left-color:var(--lineColor);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);margin:0;}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:none;color:var(--linkText);text-decoration:none;outline:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}li>p{margin-bottom:0;}li>ol, li>ul{margin-top:2px;}.toc li{list-style-type:none;underline:none;}blockquote p{font-size:0.84em !important;}</style><style data-href="/styles.8b28278c62977480bd0f.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}body{--bg:#fff;--linkText:#0070c9;--titleText:#333;--contentText:#333;--infoText:#666;--descText:#999;--transportText:#fff;--lineColor:#e8e8e8;background-color:var(--bg);--bold:700;--medium:500;--light:400}body,body.dark{-webkit-transition:color .2s ease-out,background .2s ease-out;transition:color .2s ease-out,background .2s ease-out;--h1Size:2em;--h2Size:1.6em;--h3Size:1.32em;--h4Size:1.22em}body.dark{--bg:#121212;--linkText:#6bf;--titleText:#f2f2f7;--contentText:#ccc;--infoText:#979797;--descText:#555;--transportText:#121212;--lineColor:#212121;--bold:600;--medium:400;--light:300}code[class*=language-],pre[class*=language-]{color:#323232;background:none;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:1em;line-height:1.5;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;box-sizing:border-box}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#d84315;color:#fff}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1rem;overflow:auto}.entry .entry-content .wp-block-code{border-radius:8px!important;border:none}:not(pre)>code[class*=language-],pre[class*=language-]{background:#e8e8e8}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#656565;border:none;padding-left:0}.token.punctuation{color:#9599a0}.token.selector,.token.tag{color:#ff5460}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#ffa95b}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#a9e87a}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#50cede}.token.atrule,.token.keyword{color:#e173ff}.token.function{color:#50cede}.token.important,.token.regex,.token.variable{color:#e173ff}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre.line-numbers{padding-left:3.8em;counter-reset:linenumber}pre.line-numbers,pre.line-numbers>code{position:relative}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:0;-webkit-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#5c6370;display:block;padding-right:.8em;text-align:right}.prism-titlename{margin-top:-8px!important;margin-bottom:16px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-weight:700;color:orange}body[class=dark] code[class*=language-],body[class=dark] pre[class*=language-]{color:#cdcdcd;background:none;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:1em;line-height:1.5;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;box-sizing:border-box}body[class=dark] code[class*=language-]::selection,body[class=dark] code[class*=language-] ::selection,body[class=dark] pre[class*=language-]::selection,body[class=dark] pre[class*=language-] ::selection{text-shadow:none;background:#d84315;color:#fff}@media print{body[class=dark] code[class*=language-],body[class=dark] pre[class*=language-]{text-shadow:none}}body[class=dark] pre[class*=language-]{padding:1rem;overflow:auto}body[class=dark] .entry .entry-content .wp-block-code{border-radius:8px!important;border:none}body[class=dark] :not(pre)>code[class*=language-],body[class=dark] pre[class*=language-]{background:#363636}body[class=dark] :not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}body[class=dark] .token.cdata,body[class=dark] .token.comment,body[class=dark] .token.doctype,body[class=dark] .token.prolog{color:#717171;border:none;padding-left:0}body[class=dark] .token.punctuation{color:#abb2bf}body[class=dark] .token.selector,body[class=dark] .token.tag{color:#e06c75}body[class=dark] .token.attr-name,body[class=dark] .token.boolean,body[class=dark] .token.constant,body[class=dark] .token.deleted,body[class=dark] .token.number,body[class=dark] .token.property,body[class=dark] .token.symbol{color:#d19a66}body[class=dark] .token.attr-value,body[class=dark] .token.builtin,body[class=dark] .token.char,body[class=dark] .token.inserted,body[class=dark] .token.string{color:#98c379}body[class=dark] .language-css .token.string,body[class=dark] .style .token.string,body[class=dark] .token.entity,body[class=dark] .token.operator,body[class=dark] .token.url{color:#56b6c2}body[class=dark] .token.atrule,body[class=dark] .token.keyword{color:#c678dd}body[class=dark] .token.function{color:#61afef}body[class=dark] .token.important,body[class=dark] .token.regex,body[class=dark] .token.variable{color:#c678dd}body[class=dark] .token.bold,body[class=dark] .token.important{font-weight:700}body[class=dark] .token.italic{font-style:italic}body[class=dark] .token.entity{cursor:help}body[class=dark] pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}body[class=dark] pre.line-numbers>code{position:relative}body[class=dark] .line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:0;-webkit-user-select:none;-ms-user-select:none;user-select:none}body[class=dark] .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}body[class=dark] .line-numbers-rows>span:before{content:counter(linenumber);color:#5c6370;display:block;padding-right:.8em;text-align:right}body[class=dark] .prism-titlename{margin-top:-8px!important;margin-bottom:16px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-weight:700;color:orange}photo{width:100vw}photo section p{margin-bottom:24em;color:#666;display:flex;flex-direction:row;justify-content:space-between;text-align:right;padding-left:10vw}photo section p,photo section p img{-webkit-user-select:none;-ms-user-select:none;user-select:none}photo section p img{align-items:center;width:70vw}body[class=dark] photo section p{margin-bottom:24em;color:#979797}photo section p :last-child{margin-bottom:1em}</style><meta name="generator" content="Gatsby 2.18.22"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-156342531-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          let clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/icons/icon-48x48.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#0086F6"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=92b73c6642f62ad8e09dc03b1d055873"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=92b73c6642f62ad8e09dc03b1d055873"/><title data-react-helmet="true">现代前端技术解析 | cyj&#x27;s blog</title><meta data-react-helmet="true" name="description" content="张成文 著"/><meta data-react-helmet="true" property="og:title" content="现代前端技术解析"/><meta data-react-helmet="true" property="og:description" content="张成文 著"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="cyj"/><meta data-react-helmet="true" name="twitter:title" content="现代前端技术解析"/><meta data-react-helmet="true" name="twitter:description" content="张成文 著"/><link as="script" rel="preload" href="/webpack-runtime-829691c381257b0bf2f9.js"/><link as="script" rel="preload" href="/styles-ed2892937ebf26e04d29.js"/><link as="script" rel="preload" href="/app-cd808fbbe8ee6062c447.js"/><link as="script" rel="preload" href="/commons-a30cd1829185c11a3b92.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-ad1490b756f3440158b5.js"/><link as="fetch" rel="preload" href="/page-data/读书笔记/现代前端技术解析/page-data.json" crossorigin="anonymous"/></head><body><script>
+void function() {
+  window.__onThemeChange = function() {}
+
+  var preferredTheme
+  try {
+    preferredTheme = localStorage.getItem('theme')
+  } catch (err) { }
+
+  function setTheme(newTheme) {
+    if (preferredTheme && document.body.classList.contains(preferredTheme)) {
+      document.body.classList.replace(preferredTheme, newTheme)
+    } else {
+      document.body.classList.add(newTheme)
+    }
+
+    window.__theme = newTheme
+    preferredTheme = newTheme
+    window.__onThemeChange(newTheme)
+  }
+
+  window.__setPreferredTheme = function(newTheme) {
+    setTheme(newTheme)
+    try {
+      localStorage.setItem('theme', newTheme)
+    } catch (err) {}
+  }
+
+  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  darkQuery.addListener(function(e) {
+    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+  })
+
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+}()
+    </script><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem;font-family:PingFang;font-weight:400"><header><div style="display:flex;flex-direction:row;justify-content:space-between"><h5 style="font-family:PingFang, YaHei, Montserrat, sans-serif;margin-top:0;font-weight:400;color:var(--descText);text-align:center"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/info">About me</a></h5><h5 style="font-family:PingFang, YaHei, Montserrat, sans-serif;margin-top:0;font-weight:400;color:var(--descText);text-align:center"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">cyj&#x27;s blog</a></h5><h5 style="font-family:PingFang, YaHei, Montserrat, sans-serif;margin-top:0;font-weight:400;color:var(--descText);text-align:center"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/tags">tags</a></h5><label style="position:fixed;top:38px;right:26px;cursor:pointer"><input type="checkbox" style="display:none"/><svg t="1587468095420" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="919" width="24" height="24"><path d="M512 832c-179.2 0-320-140.8-320-320s140.8-320 320-320 320 140.8 320 320S691.2 832 512 832M512 896c211.2 0 384-172.8 384-384s-172.8-384-384-384S128 300.8 128 512 300.8 896 512 896L512 896zM800 512c0-160-128-288-288-288l0 576C672 800 800 672 800 512zM480 608 243.2 608C249.6 620.8 256 640 262.4 652.8l217.6 0L480 608zM480 416 480 371.2 262.4 371.2C256 384 249.6 403.2 243.2 416L480 416zM480 300.8 480 256 384 256C358.4 268.8 339.2 281.6 320 300.8L480 300.8zM224 537.6l256 0L480 492.8l-256 0c0 6.4 0 12.8 0 19.2S224 524.8 224 537.6zM480 723.2 320 723.2c19.2 19.2 38.4 32 64 44.8l96 0L480 723.2z" p-id="920" fill="#cccccc"></path></svg></label></div></header><main><article><header><h3 style="margin-top:8.75rem;margin-bottom:0;font-size:34px;font-weight:400;color:var(--titleText)">现代前端技术解析</h3><p style="font-family:Times New Roman, serif;margin-top:8px;color:var(--contentText)">张成文 著</p><div style="display:flex;flex-direction:row;align-items:center;margin-top:1.75rem;margin-bottom:0.525rem"></div><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;color:var(--descText)">2019-04-27 22:12</p></header><section style="color:var(--contentText)"><div class="toc">
+<ul>
+<li>
+<p><a href="#%E7%AC%AC1%E7%AB%A0-web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80">第1章　Web前端技术基础</a></p>
+<ul>
+<li><a href="#11-%E7%8E%B0%E4%BB%A3web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E6%A6%82%E8%BF%B0">1.1　现代Web前端技术发展概述</a></li>
+<li><a href="#12-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80">1.2　浏览器应用基础</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="第1章-web前端技术基础" style="position:relative;"><a href="#%E7%AC%AC1%E7%AB%A0-web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80" aria-label="第1章 web前端技术基础 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>第1章　Web前端技术基础</h2>
+<h3 id="11-现代web前端技术发展概述" style="position:relative;"><a href="#11-%E7%8E%B0%E4%BB%A3web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E6%A6%82%E8%BF%B0" aria-label="11 现代web前端技术发展概述 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1　现代Web前端技术发展概述</h3>
+<p><strong>——页面内容多而复杂</strong></p>
+<div class="mermaid" data-processed="true"><svg id="mermaid-1588161690219" width="538.59375" xmlns="http://www.w3.org/2000/svg" height="55" viewBox="0 0 538.59375 55"><style>#mermaid-1588161690219 .label{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);color:#333}#mermaid-1588161690219 .label text{fill:#333}#mermaid-1588161690219 .node rect,#mermaid-1588161690219 .node circle,#mermaid-1588161690219 .node ellipse,#mermaid-1588161690219 .node polygon,#mermaid-1588161690219 .node path{fill:#eee;stroke:#999;stroke-width:1px}#mermaid-1588161690219 .node .label{text-align:center}#mermaid-1588161690219 .node.clickable{cursor:pointer}#mermaid-1588161690219 .arrowheadPath{fill:#333}#mermaid-1588161690219 .edgePath .path{stroke:#666;stroke-width:1.5px}#mermaid-1588161690219 .edgeLabel{background-color:#fff;text-align:center}#mermaid-1588161690219 .cluster rect{fill:#eaf2fb;stroke:#26a;stroke-width:1px}#mermaid-1588161690219 .cluster text{fill:#333}#mermaid-1588161690219 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:12px;background:#eaf2fb;border:1px solid #26a;border-radius:2px;pointer-events:none;z-index:100}#mermaid-1588161690219 .actor{stroke:#999;fill:#eee}#mermaid-1588161690219 text.actor{fill:#333;stroke:none}#mermaid-1588161690219 .actor-line{stroke:#666}#mermaid-1588161690219 .messageLine0{stroke-width:1.5;stroke-dasharray:'2 2';stroke:#333}#mermaid-1588161690219 .messageLine1{stroke-width:1.5;stroke-dasharray:'2 2';stroke:#333}#mermaid-1588161690219 #arrowhead{fill:#333}#mermaid-1588161690219 .sequenceNumber{fill:#fff}#mermaid-1588161690219 #sequencenumber{fill:#333}#mermaid-1588161690219 #crosshead path{fill:#333 !important;stroke:#333 !important}#mermaid-1588161690219 .messageText{fill:#333;stroke:none}#mermaid-1588161690219 .labelBox{stroke:#999;fill:#eee}#mermaid-1588161690219 .labelText{fill:#333;stroke:none}#mermaid-1588161690219 .loopText{fill:#333;stroke:none}#mermaid-1588161690219 .loopLine{stroke-width:2;stroke-dasharray:'2 2';stroke:#999}#mermaid-1588161690219 .note{stroke:#770;fill:#ffa}#mermaid-1588161690219 .noteText{fill:black;stroke:none;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:14px}#mermaid-1588161690219 .activation0{fill:#f4f4f4;stroke:#666}#mermaid-1588161690219 .activation1{fill:#f4f4f4;stroke:#666}#mermaid-1588161690219 .activation2{fill:#f4f4f4;stroke:#666}#mermaid-1588161690219 .mermaid-main-font{font-family:"trebuchet ms", verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .section{stroke:none;opacity:0.2}#mermaid-1588161690219 .section0{fill:#80b3e6}#mermaid-1588161690219 .section2{fill:#80b3e6}#mermaid-1588161690219 .section1,#mermaid-1588161690219 .section3{fill:#fff;opacity:0.2}#mermaid-1588161690219 .sectionTitle0{fill:#333}#mermaid-1588161690219 .sectionTitle1{fill:#333}#mermaid-1588161690219 .sectionTitle2{fill:#333}#mermaid-1588161690219 .sectionTitle3{fill:#333}#mermaid-1588161690219 .sectionTitle{text-anchor:start;font-size:11px;text-height:14px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .grid .tick{stroke:#e6e6e6;opacity:0.8;shape-rendering:crispEdges}#mermaid-1588161690219 .grid .tick text{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .grid path{stroke-width:0}#mermaid-1588161690219 .today{fill:none;stroke:#d42;stroke-width:2px}#mermaid-1588161690219 .task{stroke-width:2}#mermaid-1588161690219 .taskText{text-anchor:middle;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .taskText:not([font-size]){font-size:11px}#mermaid-1588161690219 .taskTextOutsideRight{fill:#333;text-anchor:start;font-size:11px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .taskTextOutsideLeft{fill:#333;text-anchor:end;font-size:11px}#mermaid-1588161690219 .task.clickable{cursor:pointer}#mermaid-1588161690219 .taskText.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588161690219 .taskTextOutsideLeft.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588161690219 .taskTextOutsideRight.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588161690219 .taskText0,#mermaid-1588161690219 .taskText1,#mermaid-1588161690219 .taskText2,#mermaid-1588161690219 .taskText3{fill:#fff}#mermaid-1588161690219 .task0,#mermaid-1588161690219 .task1,#mermaid-1588161690219 .task2,#mermaid-1588161690219 .task3{fill:#26a;stroke:#1a4d80}#mermaid-1588161690219 .taskTextOutside0,#mermaid-1588161690219 .taskTextOutside2{fill:#333}#mermaid-1588161690219 .taskTextOutside1,#mermaid-1588161690219 .taskTextOutside3{fill:#333}#mermaid-1588161690219 .active0,#mermaid-1588161690219 .active1,#mermaid-1588161690219 .active2,#mermaid-1588161690219 .active3{fill:#eee;stroke:#1a4d80}#mermaid-1588161690219 .activeText0,#mermaid-1588161690219 .activeText1,#mermaid-1588161690219 .activeText2,#mermaid-1588161690219 .activeText3{fill:#333 !important}#mermaid-1588161690219 .done0,#mermaid-1588161690219 .done1,#mermaid-1588161690219 .done2,#mermaid-1588161690219 .done3{stroke:#666;fill:#bbb;stroke-width:2}#mermaid-1588161690219 .doneText0,#mermaid-1588161690219 .doneText1,#mermaid-1588161690219 .doneText2,#mermaid-1588161690219 .doneText3{fill:#333 !important}#mermaid-1588161690219 .crit0,#mermaid-1588161690219 .crit1,#mermaid-1588161690219 .crit2,#mermaid-1588161690219 .crit3{stroke:#b1361b;fill:#d42;stroke-width:2}#mermaid-1588161690219 .activeCrit0,#mermaid-1588161690219 .activeCrit1,#mermaid-1588161690219 .activeCrit2,#mermaid-1588161690219 .activeCrit3{stroke:#b1361b;fill:#eee;stroke-width:2}#mermaid-1588161690219 .doneCrit0,#mermaid-1588161690219 .doneCrit1,#mermaid-1588161690219 .doneCrit2,#mermaid-1588161690219 .doneCrit3{stroke:#b1361b;fill:#bbb;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}#mermaid-1588161690219 .milestone{transform:rotate(45deg) scale(0.8, 0.8)}#mermaid-1588161690219 .milestoneText{font-style:italic}#mermaid-1588161690219 .doneCritText0,#mermaid-1588161690219 .doneCritText1,#mermaid-1588161690219 .doneCritText2,#mermaid-1588161690219 .doneCritText3{fill:#333 !important}#mermaid-1588161690219 .activeCritText0,#mermaid-1588161690219 .activeCritText1,#mermaid-1588161690219 .activeCritText2,#mermaid-1588161690219 .activeCritText3{fill:#333 !important}#mermaid-1588161690219 .titleText{text-anchor:middle;font-size:18px;fill:#333;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 g.classGroup text{fill:#999;stroke:none;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:10px}#mermaid-1588161690219 g.classGroup text .title{font-weight:bolder}#mermaid-1588161690219 g.clickable{cursor:pointer}#mermaid-1588161690219 g.classGroup rect{fill:#eee;stroke:#999}#mermaid-1588161690219 g.classGroup line{stroke:#999;stroke-width:1}#mermaid-1588161690219 .classLabel .box{stroke:none;stroke-width:0;fill:#eee;opacity:0.5}#mermaid-1588161690219 .classLabel .label{fill:#999;font-size:10px}#mermaid-1588161690219 .relation{stroke:#999;stroke-width:1;fill:none}#mermaid-1588161690219 .dashed-line{stroke-dasharray:3}#mermaid-1588161690219 #compositionStart{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 #compositionEnd{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 #aggregationStart{fill:#eee;stroke:#999;stroke-width:1}#mermaid-1588161690219 #aggregationEnd{fill:#eee;stroke:#999;stroke-width:1}#mermaid-1588161690219 #dependencyStart{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 #dependencyEnd{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 #extensionStart{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 #extensionEnd{fill:#999;stroke:#999;stroke-width:1}#mermaid-1588161690219 .commit-id,#mermaid-1588161690219 .commit-msg,#mermaid-1588161690219 .branch-label{fill:lightgrey;color:lightgrey;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .pieTitleText{text-anchor:middle;font-size:25px;fill:#333;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 .slice{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 g.stateGroup text{fill:#999;stroke:none;font-size:10px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588161690219 g.stateGroup text{fill:#999;stroke:none;font-size:10px}#mermaid-1588161690219 g.stateGroup .state-title{font-weight:bolder;fill:#000}#mermaid-1588161690219 g.stateGroup rect{fill:#eee;stroke:#999}#mermaid-1588161690219 g.stateGroup line{stroke:#999;stroke-width:1}#mermaid-1588161690219 .transition{stroke:#999;stroke-width:1;fill:none}#mermaid-1588161690219 .stateGroup .composit{fill:white;border-bottom:1px}#mermaid-1588161690219 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px}#mermaid-1588161690219 .state-note{stroke:#770;fill:#ffa}#mermaid-1588161690219 .state-note text{fill:black;stroke:none;font-size:10px}#mermaid-1588161690219 .stateLabel .box{stroke:none;stroke-width:0;fill:#eee;opacity:0.5}#mermaid-1588161690219 .stateLabel text{fill:#000;font-size:10px;font-weight:bold;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}:root{--mermaid-font-family: '"trebuchet ms", verdana, arial';--mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive}
+
+:root { --mermaid-font-family: "trebuchet ms", verdana, arial;}</style><style>#mermaid-1588161690219 {
+    color: rgb(0, 0, 0);
+    font: normal normal 400 normal 16px / normal "trebuchet ms", verdana, arial;
+  }</style><g transform="translate(0, 0)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M120.40625,27.5L145.40625,27.5L170.40625,27.5" marker-end="url(#arrowhead12)" style="fill:none"></path><defs><marker id="arrowhead12" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M308.046875,27.5L333.046875,27.5L358.046875,27.5" marker-end="url(#arrowhead13)" style="fill:none"></path><defs><marker id="arrowhead13" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="install" transform="translate(64.203125,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-56.203125" y="-19.5" width="112.40625" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-46.203125,-9.5)"><foreignObject width="92.40625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Install Plugin</div></foreignObject></g></g></g><g class="node" id="configure" transform="translate(239.2265625,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-68.8203125" y="-19.5" width="137.640625" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-58.8203125,-9.5)"><foreignObject width="117.640625" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Configure Plugin</div></foreignObject></g></g></g><g class="node" id="draw" transform="translate(444.3203125,27.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-86.2734375" y="-19.5" width="172.546875" height="39" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-76.2734375,-9.5)"><foreignObject width="152.546875" height="19"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Draw Fancy Diagrams</div></foreignObject></g></g></g></g></g></g></svg></div>
+<p><strong>保证开发效率</strong>：通常，在前端项目实践中，我们需要借助符合特定场景的前端框架来提高开发效率，例如使用jQuery、MVVM等开发框架，对常用的HTMLDOM（DocumentObjectModel，文档对象模型，是指HTML内容通过浏览器解析后建立的具有节点父子关系的树形对象）操作进行高效封装，大大简化开发工作量，提高效率。<br>
+<strong>项目的管理和维护</strong>：模块化和组件化<br>
+<strong>快速加载内容</strong>：异步加载数据，图片的优化处理（如使用更高压缩比webp格式的图片）<br>
+<strong>合理地利用文件缓存</strong>：这样可以大幅度提高网页资源的加载速度，而且幸运的是，浏览器默认可以支持文件缓存，对于一段时间内浏览器的重复请求，服务器可能会返回HTTP的304状态码或者不发送请求，让浏览器直接从本地读取内容。</p>
+<h3 id="12-浏览器应用基础" style="position:relative;"><a href="#12-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80" aria-label="12 浏览器应用基础 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2　浏览器应用基础</h3>
+<p>接收到用户输入的网址后，浏览器会开启一个线程来处理这个请求，对用户输入的URL地址进行分析判断，如果是HTTP协议就按照HTTP方式来处理。○　调用浏览器引擎中的对应方法，比如WebView中的loadUrl方法，分析并加载这个URL地址。○　通过DNS解析获取该网站地址对应的IP地址，查询完成后连同浏览器的Cookie、userAgent等信息向网站目的IP发出GET请求。○　进行HTTP协议会话，浏览器客户端向Web服务器发送报文。○　进入网站后台上的Web服务器处理请求，如Apache、Tomcat、Node.js等服务器。○　进入部署好的后端应用，如PHP、Java、JavaScript、Python等后端程序，找到对应的请求处理逻辑，这期间可能会读取服务器缓存或查询数据库等。○　服务器处理请求并返回响应报文，此时如果浏览器访问过该页面，缓存上有对应资源，会与服务器最后修改记录对比，一致则返回304，否则返回200和对应的内容。○　浏览器开始下载HTML文档（响应报头状态码为200时）或者从本地缓存读取文件内容（浏览器缓存有效或响应报头状态码为304时）。○　浏览器根据下载接收到的HTML文件解析结构建立DOM（DocumentObjectModel，文档对象模型）文档树，并根据HTML中的标记请求下载指定的MIME类型文件（如CSS、JavaScript脚本等），同时设置缓存等内容。○　页面开始解析渲染DOM，CSS根据规则解析并结合DOM文档树进行网页内容布局和绘制渲染，JavaScript根据DOMAPI操作DOM，并读取浏览器缓存、执行事件绑定等，页面整个展示过程完成。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置425</p>
+<p>通常我们认为浏览器主要由七部分组成：用户界面、网络、JavaScript引擎、渲染引擎、UI后端、JavaScript解释器和持久化数据存储。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置456</p>
+<p>这里我们要关注的是渲染树的布局阶段和绘制阶段。页面生成后，如果页面元素位置发生变化，就要从布局阶段开始重新渲染，也就是页面重排，所以页面重排一定会进行后续重绘；如果页面元素只是显示样式改变而布局不变，那么页面内容改变将从绘制阶段开始，也称为页面重绘。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置460</p>
+<p>渲染引擎对DOM渲染树的解析和输出是逐行进行的，所以渲染树前面的内容可以先渲染展示，这样就保证了较好的用户体验。另外也尽量不要在HTML显示内容中插入script脚本等标签，script标签内容的解释执行常常会阻塞页面结构的渲染。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置465</p>
+<p>Webkit内核中的HTML和CSS解析可以认为是并行的；而Gecko则是先解析HTML，生成内容Sink（ContentSink可以认为是构建DOM结构树的工厂方法）后再开始解析CSS。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置514</p>
+<p>仍需要结合CSS规则生成一个带有节点CSS样式描述的DOM树。</p>
+<p>标注(橙色)-1.2　浏览器应用基础>位置516</p>
+<p>DOM元素标签是指文本化的HTML标识，而DOM元素对象则是指经过渲染引擎DOM解析后生成的具有节点父子关系的树形对象。</p>
+<p>标注(蓝色)-1.2　浏览器应用基础>位置530</p>
+<p>关于CSS规则的权重计算，一般认为是！important>内联样式规则（权重1000）>id选择器（权重100）>类选择器（权重10）>元素选择器（权重1）。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置536</p>
+<p>数据持久化存储主要是针对浏览器的，所以我们统称为浏览器缓存（</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置539</p>
+<p>现代浏览器的8种缓存机制：HTTP文件缓存、LocalStorage、SessionStorage、indexDB、WebSQL、Cookie、CacheStorage、ApplicationCache，另外还有一种使用不太多的Flash缓存方式。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置547</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置551</p>
+<p>服务端判断Etag未修改则返回状态304，修改则返回200，</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置554</p>
+<p>HTTP缓存可以在文件缓存生效的情况下让浏览器从本地读取文件，不仅加快了页面资源加载，同时节省网络流量，所以在Web站点配置中要尽可能利用缓存来优化请求过程。在</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置556</p>
+<p>一般这里CacheControl设置maxage的时间单位是秒，如果同时设置了Expires和CacheControl，则只有CacheControl的设置生效。&#x3C;metahttpequiv=“Expires”content=“Mon,20Jul201623:00:00GMT”/></p>
+<p>标注(蓝色)-1.2　浏览器应用基础>位置570</p>
+<p>是，这里的大小限制指的是单个域名下localStorage的大小，所以localStorage中不适合存放过多的数据，如果数据存放超过最大限制可能会读取报错，</p>
+<p>标注(蓝色)-1.2　浏览器应用基础>位置577</p>
+<p>letrkey=/^[09AZaz_@]*$/;letstore;//转换对象functioninit(){if(typeofstore===‘undefined’){store=window[‘localStorage’];}returntrue;}//判断localStorage的key值是否合法functionisValidKey(key){if(typeofkey!==‘string’){returnfalse;}returnrkey.test(key);}exports={//设置localStorage单条记录set(key,value){letsuccess=false;if(isValidKey(key)&#x26;&#x26;init()){try{value+=”;store.setItem(key,value);success=true;}catch(e){}}returnsuccess;},//读取localStorage单条记录get(key){if(isValidKey(key)&#x26;&#x26;init()){try{returnstore.getItem(key);}catch(e){}}returnnull;},//移除localStorage单条记录remove(key){if(isValidKey(key)&#x26;&#x26;init()){try{store.removeItem(key);returntrue;}catch(e){}}returnfalse;},//清除localStorage所有记录clear(){if(init()){try{for(letkeyinstore){store.removeItem(key);}returntrue;}catch(e){}}returnfalse;}};module.exports=exports;</p>
+<p>备注-1.2　浏览器应用基础>位置599</p>
+<p>loocalsrtoage</p>
+<p>标注(粉色)-1.2　浏览器应用基础>位置599</p>
+<p>单个域名下localStorage的大小是有限制的，但是可以用iframe的方式使用多个域名来突破单个页面下localStorage存储数据的最大限制。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置609</p>
+<p>我们通常认为Cookie的最大长度限制为4KB（</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置622</p>
+<p>Cookie设置中有个HttpOnly参数，前端浏览器使用document.cookie是读取不到HttpOnly类型Cookie的，被设置为HttpOnly的Cookie记录只能通过HTTP请求头发送到服务器端进行读写操作，这样就避免了服务器端的Cookie记录被前端JavaScript修改，保证了服务端验证Cookie的安全性。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置645</p>
+<p>WebSQL是浏览器端用于存储较大量数据的缓存机制，不过这只有较新版本的Chrome浏览器支持该机制，并以一个独立浏览器端数据存储规范的形式出现。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置658</p>
+<p>openDatabase()方法可以打开已存在的数据库，并默认创建不存在的数据库。openDatabase()中的五个参数分别为数据库名、版本号、描述、数据库大小、创建回调，即使创建回调为null也可以创建数据库，transaction()方法允许我们根据情况控制执行事务提交或回滚，executeSql()则用于执行真实的SQL查询语句。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置674</p>
+<p>和WebSQL类似，目前使用IndexDB的实际应用场景也不是很多，而且将大量数据保存到本地也会造成数据泄露，</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置687</p>
+<p>图114　ApplicationCache文件访问与更新机制</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置727</p>
+<p>要了解cacheStorage，我们必须深入了解一下ServiceWorker，ServiceWorker与WebWorker一样是在浏览器后台作为一个独立的线程运行的JavaScript脚本，可以为浏览器提供并行的计算和数据处理能力，并通过message/postMessage方法在页面之间进行通信，但是不能与前端界面进行交互。我们知道NativeAPP（一般指移动客户端的原生应用）可以做到消息推送、离线使用、自动更新等，同样地，如果使用ServiceWorker也可以让Web应用具有类似功能。</p>
+<p>标注(黄色)-1.2　浏览器应用基础>位置759</p>
+<p>只有HTTP缓存、localStorage和Cookie。ServiceWorker在将来可能会被使用，但目前兼容性的欠缺仍然不能忽视，其他的缓存方式我们仅作为知识了解即可。</p>
+<p>标注(黄色)-1.3　前端高效开发技术>位置791</p>
+<p>自文档化代码的编写也是一个很好的习惯。</p>
+<p>标注(黄色)-1.3　前端高效开发技术>位置803</p>
+<p>用F12打开控制台后，</p>
+<p>标注(粉色)-1.3　前端高效开发技术>位置819</p>
+<p>Audits则可以根据目前页面文档加载和脚本执行情况给出当前前端页面的部分优化建议，这对于前端页面的优化具有极其重要的借鉴意义。</p>
+<p>标注(粉色)-1.3　前端高效开发技术>位置822</p>
+<p>例如，在Chrome地址栏中输入chrome://inspect/#devices即可查看主机当前连接的移动设备浏览器打开网页的情况，并可以阅读DOM结构和查看Debug信息。</p>
+<p>标注(粉色)-1.3　前端高效开发技术>位置831</p>
+<p>Fiddler，</p>
+<p>标注(蓝色)-1.3　前端高效开发技术>位置844</p>
+<p>服务端开发调试的工具也比较多。例如nodesupervisor、nodeinspector及以后可能出现的新工具。这类工具入门很简单，</p>
+<p>第2章　前端与协议</p>
+<p>标注(黄色)-位置892</p>
+<p>基于SSL（SecureSocketsLayer，安全套接字层）层的HTTPS协议。</p>
+<p>标注(黄色)-位置894</p>
+<p>与移动端Native原生程序交互的协议。</p>
+<p>标注(黄色)-位置894</p>
+<p>HTML5的WebSocket实时通信协议、与服务端交互的RESTful协议等。</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置897</p>
+<p>HTTP（HyperTextTransportProtocol，超文本传输协议）协议是WWW服务器和用户请求代理（例如浏览器等）之间通过应答请求模式传输超文本（例如HTML文件、JavaScript文件、CSS文件、图片甚至服务器接口数据等）内容的一种协议，</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置900</p>
+<p>浏览器（用户请求代理）向服务器发送请求时头部中包含请求的方法GET、URL（UniformResourceLocation，统一资源定位符）<a href="http://www.jixianqianduan.com/%E3%80%81%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC%E5%8F%B71.1%E3%80%81%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%9F%9F%E5%AD%97%E6%AE%B5%EF%BC%88%E5%A6%82%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%97%E7%B1%BB%E5%9E%8BAccept%EF%BC%89%E3%80%81%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6CacheControl%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8Cookie%E5%92%8CuserAgent%E4%BF%A1%E6%81%AF%E7%AD%89%EF%BC%8C%E5%90%8C%E6%97%B6%E4%B9%9F%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%B8%A6%E4%B8%8A%E8%AF%B7%E6%B1%82%E7%9A%84%E6%AD%A3%E6%96%87%E5%86%85%E5%AE%B9%E3%80%82">http://www.jixianqianduan.com/、协议版本号1.1、请求头域字段（如请求接受类型Accept）、缓存控制CacheControl、浏览器Cookie和userAgent信息等，同时也可能会带上请求的正文内容。</a></p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置903</p>
+<p>响应的内容包括HTTP消息响应的协议版本1.1、返回码304及返回描述NotModified、缓存控制信息CacheControl以及正文的HTML内容等，</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置908</p>
+<p>通常一个完整的HTTP报文由头部、空行、正文三部分组成。空行用于区分报文头部和报文正文，由一个回车符和一个换行符组成。</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置920</p>
+<p>提到HTTP1.1协议，我们首先想到的一个重要特性就是长连接。</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置924</p>
+<p>但是在HTTP1.1协议中，任何HTTP请求的报文头部域都会默认包含keepalive.keepalive的控制可以让客户端到服务器端之间的连接在一段时间内持续有效，</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置933</p>
+<p>例如WebSocket协议就是典型的应用，WebSocket协议通信是通过HTTP的方式来建立的，通信连接建立完成后通知服务器切换到WebSocket协议来完成后面的数据通信。</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置936</p>
+<p>通信，如果服务端支持WebSocket服务并允许该客户端来连接，则可以在响应报文头中返回Upgrade和Connection消息头域，同意浏览器使用WebSocket来连接，同时返回的状态码为101表示请求还需要完成协议的切换。</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置941</p>
+<p>HTTP1.1增加了CacheControl头域，可以支持maxage用来表示相对过期时间，另外请求服务器时也可以根据Etag和LastModified来判断是否从浏览器端缓存中加载文件，此时缓存的控制和判断将决定服务器的响应报文中头部内容的状态码200还是304。</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置951</p>
+<p>这就是CacheControl、Etag和LastModified控制请求缓存的</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置954</p>
+<p>部分内容传输优化指HTTP可以支持超文本文件的部分传输，</p>
+<p>标注(黄色)-2.1　HTTP协议简介>位置993</p>
+<p>Etag：对象（比如URL）的标志值。一个对象（如HTML文件）如果被修改了，其Etag也会被修改，所以Etag的作用和LastModified差不多，主要供Web服务器判断一个对象是否改变。例如前一次请求某个HTML文件时获得了其Etag，当这次又请求该文件时，浏览器就会把先前获得的Etag值发送给Web服务器，然后Web服务器会将这个Etag值跟该文件当前的Etag值进行对比，判断文件是否改变。</p>
+<p>标注(橙色)-2.1　HTTP协议简介>位置1024</p>
+<p>SPDY是一种基于HTTP的兼容协议，由Google发起，Chrome、Opera、Firefox等较新的浏览器已提供该协议支持。SPDY传输支持多路复用和服务器推送技术，压缩了HTTP头部减小了请求大小，并强制使用SSL传输协议，到目前为止已经成为了一套成熟的高效协议标准。</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置1030</p>
+<p>HTTP2采用完全二进制的格式来传输数据，而非HTTP1.x的默认文本格式。而二进制在网络中传输的基本单位一般为帧（</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置1035</p>
+<p>HTTP2使用TCP多路复用的方式来降低网络请求连接建立和关闭的开销，</p>
+<p>备注-2.1　HTTP协议简介>位置1036</p>
+<p>采用多路复用技术能把多个信号组合起来在一条物理信道上进行传输，在远距离传输时可大大节省电缆的安装和维护费用。频分多路复用FDM(FrequencyDivisionMultiplexing)和时分多路复用TDM(TimeDivisionMultiplexing)是两种最常用的多路复用技术。</p>
+<p>标注(蓝色)-2.1　HTTP协议简介>位置1038</p>
+<p>这里我们有必要明确一下TCP连接复用和HTTP1.1中keepalive连接复用的区别：TCP复用传输是发生在传输层的，而keepalive控制的文件的连接复用是在应用层的；keepalive的连接复用是串行的，即一个文件传输完后，下个文件才能复用这个连接，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1059</p>
+<p>XSS（CrossSiteScript，跨站脚本攻击）、SQL（StructuredQueryLanguage，结构化查询语言）注入和CSRF（CrosssiteRequestForgery，跨站请求伪造）均属于基础的前端安全知识，逐个来看一下。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1061</p>
+<p>XSS通常是由带有页面可解析内容的数据未经处理直接插入到页面上解析导致的。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1062</p>
+<p>XSS分为存储型XSS、反射型XSS、MXSS（也叫DOMXSS）三种。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1063</p>
+<p>存储型XSS的攻击脚本常常是由前端提交的数据未经处理直接存储到数据库然后从数据库中读取出来后又直接插入到页面中所导致的；反射型XSS可能是在网页URL参数中注入了可解析内容的数据而导致的，如果直接获取URL中不合法的并插入页面中则可能出现页面上的XSS攻击；MXSS则是在渲染DOM属性时将攻击脚本插入DOM属性中被解析而导致的。XSS主要的防范方法是验证输入到页面上所有内容来源数据是否安全，如果可能含有脚本标签等内容则需要进行必要的转义。具体看下面几个例子。</p>
+<p>标注(蓝色)-2.2　web安全机制>位置1077</p>
+<p>一般的做法是将所有可能包含攻击的内容进行HTML字符编码转义，目前的HTML字符编码解码就可以如下实现。</p>
+<p>标注(蓝色)-2.2　web安全机制>位置1089</p>
+<p>SQL注入攻击主要是因为页面提交数据到服务器端后，在服务器端未进行数据验证就将数据直接拼接到SQL语句中执行，因此产生执行与预期不同的现象。主要防范措施是对前端网页提交的数据内容进行严格的检查校验。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1095</p>
+<p>CSRF是指非源站点按照源站点的数据请求格式提交非法数据给源站点服务器的一种攻击方法。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1098</p>
+<p>通常比较安全的是通过页面Token（令牌）提交验证的方式来验证请求是否为源站点页面提交的，来阻止跨站伪请求的发生。</p>
+<p>标注(蓝色)-2.2　web安全机制>位置1108</p>
+<p>其中一种形式是将页面提交到后台的验证Token与session临时保存的Token进行比较就可以来实现了。</p>
+<p>标注(蓝色)-2.2　web安全机制>位置1114</p>
+<p>标注(黄色)-2.2　web安全机制>位置1122</p>
+<p>网络请求劫持的发生也越来越频繁。网络劫持一般指网站资源请求在请求过程中因为人为的攻击导致没有加载到预期的资源内容。网络请求劫持目前主要分为两种：DNS劫持与HTTP劫持。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1125</p>
+<p>取得某域名的解析记录控制权，进而修改此域名的解析结果，导致用户对该域名地址的访问由原IP地址转入到修改后的指定IP地址的现象，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1136</p>
+<p>一般用户请求源网站的IP地址及网站加载的内容和脚本都是正确的，但是在网站内容请求返回的过程中，可能被ISP（InternetServiceProvider，互联网服务提供商）劫持修改，最终在浏览器页面上添加显示一些广告等内容信息。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1141</p>
+<p>HTTPS协议是通过加入SSL（SecureSocketsLayer）层来加密HTTP数据进行安全传输的HTTP协议，同时启用默认的443端口进行数据传输。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1142</p>
+<p>HTTPS是怎样保证浏览器和服务器之间数据安全传输的呢？我们需要先理解两个概念：公钥和私钥。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1148</p>
+<p>客户端在需要使用HTTPS请求数据时，首先会发起连接请求，告诉服务器将建立HTTPS连接；服务器收到通知后自己生成一个公钥并将它返回给客户端，如果是第一次请求，同时还要告诉客户端需要进行连接验证；如果需要验证，客户端接收到服务器公钥后开始发送验证请求，将一个特定的验证串使用服务器返回的公钥加密后形成密文发送给服务器，同时客户端也将自己生成的公钥发送给服务器；服务器获取到加密的报文和客户端公钥，先使用服务器私钥解密报文获得验证串，然后将验证串通过接收到的客户端公钥加密后返回给客户端；客户端再通过私钥解密验证串，判断是否为自己开始发送的验证串；如果正确，说明双方的连接是安全的，连接验证成功，客户端开始将后面的数据通过服务器初始返回的公钥不断加密发送给服务器，服务器也不断解密获取报文，并通过客户端公钥加密响应的报文内容返回给客户端验证。这样就建立了HTTPS双向的加密传输连接。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1158</p>
+<p>HTTPS的请求只能被添加了对应数字证书的应用层代理拦截，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1159</p>
+<p>Node端就可以用以下方法来实现。//引入https模块consthttpsModule=require(‘https’);constfs=require(‘fs’);//加载网站https服务证书文件，证书一般需要注册申请consthttps=httpsModule.Server({key:fs.readFileSync(‘/path/to/server.key’),cert:fs.readFileSync(‘/path/to/server.crt’)},function(req,res){res.writeHead(200);res.end(“helloworld\n”);});//https默认监听端口443https.listen(443,function(err){console.log(“httpslisteningonport:443”);});当然，如果使用Web框架，也可以通过更简单的方式创建一个HTTPS服务器。constkoa=require(‘koa’);constapp=koa();//同时监听多个端口app.listen(80);app.listen(443);</p>
+<p>标注(黄色)-2.2　web安全机制>位置1169</p>
+<p>RemoteAddress:192.30.252.131:443</p>
+<p>标注(黄色)-2.2　web安全机制>位置1171</p>
+<p>upgradeinsecurerequests，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1172</p>
+<p>使用HTTPS来加载HTML文件，而HTML中加载的是HTTP链接的资源文件，则会产生MixedContent类型的错误，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1189</p>
+<p>很多浏览器内置了一个配置STS的站点列表，</p>
+<p>标注(黄色)-2.2　web安全机制>位置1204</p>
+<p>blockallmixedcontent就是之前提到的，HTTPS请求的HTML会控制阻塞外部HTTP资源的文件加载。</p>
+<p>标注(黄色)-2.2　web安全机制>位置1212</p>
+<p>AccessControlAllowOrigin常常作为跨域共享设置的一种实现方式，其他常用的跨域手段还有：JSONP(JSONwithPadding)、script标签跨域、window.postMessage、修改document.domain跨子域、window.name跨域和WebSocket跨域等。</p>
+<p>标注(黄色)-2.3　前端实时协议>位置1222</p>
+<p>目前可用来在前端浏览器上进行实时通信的功能实现方式主要有WebSocket、Poll、Longpoll和DDP协议。</p>
+<p>标注(黄色)-2.3　前端实时协议>位置1238</p>
+<p>0x8表示连接关闭；○　0x9表示ping；</p>
+<p>标注(黄色)-2.3　前端实时协议>位置1242</p>
+<p>值得注意的是，WebSocket在网络中传输的最小单位也为帧，</p>
+<p>标注(黄色)-2.3　前端实时协议>位置1260</p>
+<p>Longpoll目前一个很典型的应用场景就是网站通过对应的移动客户端进行扫描二维码登录，即用户使用移动客户端扫描二维码登录网站，成功后桌面浏览器页面自动响应跳转进入一个新的登录后页面。</p>
+<p>标注(黄色)-2.3　前端实时协议>位置1266</p>
+<p>差别。图216　二维码扫描登录跳转原理function_getQrAuth(){</p>
+<p>标注(黄色)-2.5　与Native交互协议>位置1377</p>
+<p>首先来看一下HybridApp中如何通过URI请求在HTML5前端页面中来调用一个Native的方法或界面。其主要原理是，Native应用可在移动端系统中注册一个Scheme协议的URI，这个URI可在系统的任意地方授权访问来调起一段原生方法或一个原生的界面。</p>
+<p>第3章　前端三层结构与应用</p>
+<p>标注(黄色)-位置1481</p>
+<p>简单来讲，例如HTML开发可以由Component（实现的形式较多，例如WebComponent、目录级Component、其他框架自定义形式的Component）来管理结构，CSS由SASS、postCSS、stylus等预处理器的语法开发来代替，JavaScript则使用ECMAScript6+、TypeScript等特性标准进行高效开发。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1509</p>
+<p>Web语义化是指在HTML结构的恰当位置上使用语义恰当的标签，使页面具有良好的结构，使页面标签元素具有含义，能够让人或搜索引擎更容易理解。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1554</p>
+<p>CSS规范规定：每个标签元素都是有display属性的。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1578</p>
+<p>再如页面中使用<table>这个语义化标签是会导致内容渲染较慢的，因为<table>里面的内容渲染是等表格内容全部解析完生成渲染树后一次性渲染到页面上的，如果表格内容较多，就可能产生渲染过程较慢的问题，因此我们常常需要通过其他的方式来模拟<table>元素，例如使用无序列表来模拟表格。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1598</p>
+<p>实际项目开发中，我们常常把<i>元素标签当作页面上的icon图标标签来使用></p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1615</p>
+<p><img>标签的alt属性和title属性是有区别的，alt属性一般表示图片加载失败时提示的文字内容，title属性则指鼠标放到元素上时显示的提示文字。在页面结构书写中，我们常用title来提示一些省略掉的文字的全部内容。例如&#x3C;ptitle=“这是一段很长的文字，包含很多内容”>这是一段很长的文字…</p>，这样在页面中可能只展示部分文字，但用户可以通过鼠标提示看到这段文字的完整内容，这对</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1636</p>
+<p>不同的是AMPHTML是通过自定义元素完成Component来实现的，懒加载则是通过JavaScript直接在网页中操作实现。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1638</p>
+<p>浏览器同一个域名的最大并行下载线程个数是有限的，所以我们常常要先加载页面的关键性展示资源，延后加载页面脚本类资源或页面的非关键性图片资源。一般浏览器（IE8以上）对同一个域名下的资源最多支持4～6个并行下载数，所以为了增大资源下载并行数，我们常常将HTML、JavaScript、CSS、图片资源分域存放。分域也可以将静态资源请求进行服务器端的负载均衡，并对请求中的cookie信息进行隔离，因为跨域请求默认是不带Cookie的，这样便减小了JavaScript、CSS、图片等资源的请求头部信息大小，从而提升了请求的解析速度。</p>
+<p>标注(黄色)-3.1　HTML结构层基础>位置1654</p>
+<p>使用AMP提升页面性能的基本的原则如下。○　只允许异步的script脚本○　只加载静态的资源○　不能让内容阻塞渲染○　不在关键路径中加载第三方JavaScript○　所有的CSS必须内联○　字体使用声明必须高效○　最小化样式声明○　只运行GPU加速的动画○　处理好资源加载顺序问题○　页面必须立即加载○　提升AMP元素性能</p>
+<p>标注(黄色)-3.2　前端结构层演进>位置1706</p>
+<p>曾经我们甚至一度认为前端页面技术就是CSS+DIV技术，当然这是在前端技术发展早期，HTML的元素主要分为行内、块级和常见空元素几类。</p>
+<p>标注(黄色)-3.2　前端结构层演进>位置1713</p>
+<p>目前由于移动端浏览器内核具有相对较好的统一性和兼容性，所以HTML5主要用于移动端页面的开发。</p>
+<p>标注(黄色)-3.2　前端结构层演进>位置1772</p>
+<p>也就是说，你自己写的CSS选择器和JavaScript代码都不会影响到ShadowDOM里面的内容。实质上就是让<video>标签里的逻辑和样式都被浏览器单独封装并与外界元素独立，而<video>标签内容在浏览器上的渲染则是在浏览器结构UI后端模块中设置的。</p>
+<p>标注(黄色)-3.2　前端结构层演进>位置1775</p>
+<p>ShadowDOM是HTML的一个规范，它允许浏览器开发者封装自己的HTML标签、CSS样式和特定的JavaScript代码，同时也可以让开发人员创建类似<video>这样的自定义一级标签，创建这些新标签内容和相关的API被称为WebComponent。这里提出了ShadowDOM和WebComponent</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2068</p>
+<p>三是使用let、const在全局作用域下声明的变量不会作为属性添加到全局作用域对象里面，这点和var是不同的；四是通过测试，使用let、const赋值语句的执行速度比使用var快约65%左右。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2070</p>
+<p>区别：模块内不变的引用和常量，一般使用const定义；可变的变量或引用使用let声明；var仅用于声明函数整个作用域内需要使用的变量。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2079</p>
+<p>的。解构赋值个人</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2089</p>
+<p>需要注意的是，这里的…进行的数组复制是浅拷贝（</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2128</p>
+<p>在JavaScript中，代码的执行上下文由变量对象、作用域链和this值组成。但箭头函数与外层执行上下文共享this值。如果需要创建具有独立上下文的函数，就不要使用箭头函数。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2164</p>
+<p>所以数组循环遍历最佳方式是for…of，此外for…of也可以用来遍历Map、Set、WeakMap、WeakSet等集合。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2167</p>
+<p>纯函数一般指返回值完全由传入的参数来决定的函数，即对于同一个参数输入，在任何情况下的函数返回结果都是相同且唯一的。例如数组的slice()可以认为是一个纯函数，而random()则不是纯函数。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2181</p>
+<p>我们可以把Interator理解成为数组或对象上的一个根据偏移来访问内存内容的游标对象，每次调用next()，遍历游标会向后移动一个地址。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2192</p>
+<p>代码很浅显易懂，不过需要注意的是，Generator遇到yield关键字会暂停往后执行，但并不表示后面的程序就不执行了。如果console.log(number)是一个耗时的工作，那么程序只在Generator里面暂停，外面的程序仍会继续执行，</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2213</p>
+<p>如果一定要对应来看，Set可以认为是增强的数组类型，Map则可以认为是增强的对象类型，WeakSet和WeakMap则对应着Set和Map的优化类型，所以某种程度上，为了让程序开发更加方便，我们有必要引入集合这类更为高效的类型。WeakSet和WeakMap在生成时有更加严格的限制：WeakSet只存储对象类型的元素，不能遍历，没有size属性；WeakMap只接受基本类型的值作为键名，没有keys、values、entries等遍历方法，也没有size属性。</p>
+<p>标注(黄色)-3.4　JavaScript标准实践>位置2218</p>
+<p>需要注意的是，Map和Set都为内部的每个键或值保持了强引用，也就是说，如果一个存储的属性元素被移除了，回收机制可能无法回收它占用的内存，容易造成内存泄露，所以我们使用时要尽可能先删除引用的相关内容。相比之下，使用WeakSet和WeakMap则不会出现上述情况，因为它们并不使用强引用。再总结一下JavaScript可能出现内存泄露的常见场景：闭包函数、全局变量、对象属性循环引用、DOM节点删除时未解绑事件、Map和Set的属性直接删除。希望大家同时也要明白上述五种场景的具体情况是怎么样的。</p></section><hr style="margin-bottom:1.75rem;color:var(--lineColor)"/><footer></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="next" href="/读书笔记/软件工程第三版 Software Engineering/">← <!-- -->软件工程第三版 Software Engineering</a></li><li></li></ul></nav></main><footer style="color:var(--descText);font-size:14px;margin-top:80px">© <!-- -->2020<!-- -->, Write by cyj</footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/读书笔记/现代前端技术解析/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-cd808fbbe8ee6062c447.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-ad1490b756f3440158b5.js"],"component---src-templates-photo-post-js":["/component---src-templates-photo-post-js-4f0f8ca13ddc52f4a8c0.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-3496d10ee4007aaf3b73.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e28d4b2141eaf10a040f.js"],"component---src-pages-index-js":["/component---src-pages-index-js-3d575247419b5a927719.js"],"component---src-pages-info-js":["/component---src-pages-info-js-1b00c03f34712a0df1b1.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-290ce2ae7e5f984c9910.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-ad1490b756f3440158b5.js" async=""></script><script src="/commons-a30cd1829185c11a3b92.js" async=""></script><script src="/app-cd808fbbe8ee6062c447.js" async=""></script><script src="/styles-ed2892937ebf26e04d29.js" async=""></script><script src="/webpack-runtime-829691c381257b0bf2f9.js" async=""></script></body></html>

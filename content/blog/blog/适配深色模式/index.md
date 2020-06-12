@@ -1,7 +1,6 @@
 ---
 title: blog适配dark mode/theme
 date: "2020-04-22T20:43:31.242Z"
-tags: ['blog搭建日志']
 ---
 ```toc
 exclude: Table of Contents

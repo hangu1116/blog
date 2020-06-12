@@ -17,9 +17,8 @@ class PhotoPostTemplate extends React.Component {
         />
         <article style={{position:'absolute',zIndex:-1, maxWidth:rhythm(44),top:0,
           left: 0,
-          right: 0,
-          bottom: 0,
-          margin:'auto',alignSelf: 'center',display:'flex',flexDirection:'column',paddingTop:rhythm(8)}}>
+          right:0,
+          bottom: 0,alignSelf: 'center',display:'flex',flexDirection:'column',paddingTop:rhythm(14)}}>
           <photo>
             <section dangerouslySetInnerHTML={{ __html: post.html }} style={{...scale(-1 / 5), color:'var(--descText)'}}/>
           </photo>

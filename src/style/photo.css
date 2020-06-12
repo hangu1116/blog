@@ -1,15 +1,27 @@
+photo{
+    width: 100vw;
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*margin:0;*/
+}
+photo section{
+    /*width: 100vw;*/
+}
 photo section p{
     margin-bottom: 24em;
     color: #666666;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     /*align-items: center;*/
     text-align: right;
     user-select: none;
+    padding-left: 10vw;
 }
 photo section p img{
     align-items: center;
     user-select: none;
+    width: 70vw;
 }
 
 body[class='dark'] photo section p{
