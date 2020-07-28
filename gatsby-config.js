@@ -35,15 +35,15 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-mermaid',
+            resolve: "gatsby-remark-mermaid",
             options: {
-              language: 'mermaid',
-              theme: 'neutral',
+              language: "mermaid",
+              theme: "neutral",
               viewport: {
                 width: 200,
-                height: 200
+                height: 200,
               },
-            }
+            },
           },
           {
             resolve: `gatsby-remark-table-of-contents`,
@@ -51,7 +51,7 @@ module.exports = {
               exclude: "Table of Contents",
               tight: true,
               fromHeading: 1,
-              toHeading: 6
+              toHeading: 6,
             },
           },
           `gatsby-remark-autolink-headers`,
@@ -59,7 +59,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              showCaptions: ['title', 'alt']
+              showCaptions: ["title", "alt"],
             },
           },
           {
@@ -77,7 +77,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
-    'gatsby-plugin-dark-mode',
+    "gatsby-plugin-dark-mode",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

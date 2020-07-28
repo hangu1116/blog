@@ -9,16 +9,14 @@ class BlogIndex extends React.Component {
   renderTags(tags) {
     // console.log(tags);
     // debugger;
-    if(!tags || tags.length===0){
-      return null;
-    }else{
+    if (!tags || tags.length === 0) {
+      return null
+    } else {
       return (
         <div style={styles.articleInfo}>
-          {
-            tags.map(tag => (
-              <div style={styles.tagBody}>{tag}</div>
-            ))
-          }
+          {tags.map(tag => (
+            <div style={styles.tagBody}>{tag}</div>
+          ))}
         </div>
       )
     }
@@ -26,12 +24,15 @@ class BlogIndex extends React.Component {
   renderWriter(model) {
     // console.log(tags);
     // debugger;
-    if(!model || !model.description || !model.type || model.type!=='reading'){
-      return null;
-    }else{
-      return (
-        <span style={styles.writer}>{model.description+'    |'}</span>
-      )
+    if (
+      !model ||
+      !model.description ||
+      !model.type ||
+      model.type !== "reading"
+    ) {
+      return null
+    } else {
+      return <span style={styles.writer}>{model.description + "    |"}</span>
     }
   }
   render() {
@@ -43,7 +44,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         {/*<Bio />*/}
-        <div style={{height:80}}/>
+        <div style={{ height: 80 }} />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -52,35 +53,40 @@ class BlogIndex extends React.Component {
                 <h4
                   style={{
                     marginBottom: rhythm(1 / 4),
-                    fontSize: 'var(--h3Size)',
-                    fontWeight:'var(--medium)',
+                    fontSize: "var(--h3Size)",
+                    fontWeight: "var(--medium)",
                   }}
                 >
-                  <Link style={{ boxShadow: `none`, color:'var(--titleText)' }} to={node.fields.slug}>
+                  <Link
+                    style={{ boxShadow: `none`, color: "var(--titleText)" }}
+                    to={node.fields.slug}
+                  >
                     {title}
                   </Link>
                 </h4>
                 <div style={styles.articleInfo}>
-                  {
-                    this.renderWriter(node.frontmatter)
-                  }
-                  <small style={{color:'var(--descText)'}}>{node.frontmatter.date}</small>
-                  {
-                    this.renderTags(node.frontmatter.tags)
-                  }
+                  {this.renderWriter(node.frontmatter)}
+                  <small style={{ color: "var(--descText)" }}>
+                    {node.frontmatter.date}
+                  </small>
+                  {this.renderTags(node.frontmatter.tags)}
                 </div>
               </header>
-              {
-                node.frontmatter.type!=='reading'&&
+              {node.frontmatter.type !== "reading" && (
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}
-                    style={{fontSize:14, color:'var(--contentText)', fontWeight:'var(--light)',marginTop:rhythm(1/3)}}
+                    style={{
+                      fontSize: 14,
+                      color: "var(--contentText)",
+                      fontWeight: "var(--light)",
+                      marginTop: rhythm(1 / 3),
+                    }}
                   />
                 </section>
-              }
+              )}
               <div style={styles.articleLine} />
             </article>
           )
@@ -93,61 +99,64 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 const styles = {
-  articleInfo:{
-    display:'flex',
-    flexDirection:'row',
-    alignItems:'center',
+  articleInfo: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
   },
-  tagBody:{
-    display:'flex',
+  tagBody: {
+    display: "flex",
     // flex:0,
-    marginLeft:8,
-    alignItems:'center',
-    height:15,
-    fontSize:12,
-    color: 'var(--transportText)',
-    backgroundColor: 'var(--descText)',
-    borderRadius:10,
-    paddingLeft:6,
-    paddingRight:6,
+    marginLeft: 8,
+    alignItems: "center",
+    height: 15,
+    fontSize: 12,
+    color: "var(--transportText)",
+    backgroundColor: "var(--descText)",
+    borderRadius: 10,
+    paddingLeft: 6,
+    paddingRight: 6,
   },
-  writer:{
-    marginRight:10,
-    fontSize:12,
-    color: 'var(--descText)',
+  writer: {
+    marginRight: 10,
+    fontSize: 12,
+    color: "var(--descText)",
   },
-  articleLine:{
-    height:1,
-    width:'106%',
-    marginLeft: '-3%',
-    marginTop:'40px',
-    backgroundColor: 'var(--lineColor)',
+  articleLine: {
+    height: 1,
+    width: "106%",
+    marginLeft: "-3%",
+    marginTop: "40px",
+    backgroundColor: "var(--lineColor)",
   },
 }
 
 export const pageQuery = graphql`
   {
-  site {
-    siteMetadata {
-      title
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {lock: {ne: true}}}) {
-    edges {
-      node {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "YYYY-MM-DD")
-          title
-          tags
-          type
-          description
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { lock: { ne: true } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "YYYY-MM-DD")
+            title
+            tags
+            type
+            description
+          }
         }
       }
     }
   }
-}
 `

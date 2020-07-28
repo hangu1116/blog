@@ -10,31 +10,35 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { rhythm } from "../utils/typography"
 
-const getTagIcon = (value) => {
-  switch(value){
-    case '计算机':
-      return '👨🏻‍💻计算机/ Computer';
-    case '读书笔记':
-      return '👨🏻‍🎓读书笔记/ Reading';
+const getTagIcon = value => {
+  switch (value) {
+    case "计算机":
+      return "👨🏻‍💻计算机/ Computer"
+    case "读书笔记":
+      return "👨🏻‍🎓读书笔记/ Reading"
     default:
-      return value;
+      return value
   }
 }
 
 const TagsPage = ({
-                    data: {
-                      allMarkdownRemark: { group },
-                      site: {
-                        siteMetadata: { title },
-                      },
-                    },
-                  }) => (
+  data: {
+    allMarkdownRemark: { group },
+    site: {
+      siteMetadata: { title },
+    },
+  },
+}) => (
   <Layout>
     <Helmet title={title} />
     <div>
-      <h4 style={{
-        fontSize: 24,
-      }}>Tags</h4>
+      <h4
+        style={{
+          fontSize: 24,
+        }}
+      >
+        Tags
+      </h4>
       <ul>
         {group.map(tag => (
           <p key={tag.fieldValue}>
@@ -70,19 +74,22 @@ export default TagsPage
 
 export const pageQuery = graphql`
   {
-  site {
-    siteMetadata {
-      title
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark(limit: 2000, filter: {frontmatter: {lock: {ne: true}}}) {
-    group(field: frontmatter___tags) {
-      fieldValue
-      totalCount
-      nodes {
-        id
+    allMarkdownRemark(
+      limit: 2000
+      filter: { frontmatter: { lock: { ne: true } } }
+    ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+        nodes {
+          id
+        }
       }
     }
   }
-}
 `

@@ -11,26 +11,30 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000, filter: {frontmatter: {lock: {ne: true}}}) {
-    edges {
-      node {
-        fields {
-          slug
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: { frontmatter: { lock: { ne: true } } }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
+                type
+              }
+            }
+          }
         }
-        frontmatter {
-          title
-          tags
-          type
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
         }
       }
-    }
-  }
-  tagsGroup: allMarkdownRemark(limit: 2000) {
-    group(field: frontmatter___tags) {
-      fieldValue
-    }
-  }
-}
     `
   )
 
@@ -46,7 +50,11 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
     createPage({
       path: post.node.fields.slug,
-      component: post.node.frontmatter.tags && post.node.frontmatter.tags.includes('摄影') ? photoPost : blogPost,
+      component:
+        post.node.frontmatter.tags &&
+        post.node.frontmatter.tags.includes("摄影")
+          ? photoPost
+          : blogPost,
       context: {
         slug: post.node.fields.slug,
         previous,

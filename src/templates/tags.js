@@ -9,14 +9,46 @@ const Tags = ({ pageContext, data }) => {
   const tagHeader = `# ${tag}`
   return (
     <Layout>
-      <div style={{display: 'flex',flexDirection: 'row', paddingTop:48, alignItems:'center'}}>
-        <span style={{
-          fontSize: 24,
-          display: 'flex',
-          color:'var(--titleText)'
-        }}>{tagHeader}</span>
-        <div style={{display: 'flex',height: '22px', width: '22px', borderRadius: '11px', backgroundColor: '#b3d7ff', justifyContent: 'center', alignItems:'center', marginLeft: '8px'}}>
-          <span style={{display: 'flex',color: '#187bff', fontWeight:'500', lineHeight: '16px', fontSize: '16px'}}>{totalCount}</span>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          paddingTop: 48,
+          alignItems: "center",
+        }}
+      >
+        <span
+          style={{
+            fontSize: 24,
+            display: "flex",
+            color: "var(--titleText)",
+          }}
+        >
+          {tagHeader}
+        </span>
+        <div
+          style={{
+            display: "flex",
+            height: "22px",
+            width: "22px",
+            borderRadius: "11px",
+            backgroundColor: "#b3d7ff",
+            justifyContent: "center",
+            alignItems: "center",
+            marginLeft: "8px",
+          }}
+        >
+          <span
+            style={{
+              display: "flex",
+              color: "#187bff",
+              fontWeight: "500",
+              lineHeight: "16px",
+              fontSize: "16px",
+            }}
+          >
+            {totalCount}
+          </span>
         </div>
       </div>
       <div>
@@ -59,20 +91,23 @@ Tags.propTypes = {
 }
 export default Tags
 export const pageQuery = graphql`
-  query ($tag: String) {
-  allMarkdownRemark(limit: 2000, sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {tags: {in: [$tag]}, lock: {ne: true}}}) {
-    totalCount
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
+  query($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] }, lock: { ne: true } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
   }
-}
-
 `
