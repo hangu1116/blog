@@ -32,6 +32,10 @@ photo section p{
 photo section p img{
     align-items: center;
     user-select: none;
+    /*image在safari上变形*/
+    height: 100%;
+    width:100%;
+    object-fit: cover;
 }
 
 body[class='dark'] photo section p{
