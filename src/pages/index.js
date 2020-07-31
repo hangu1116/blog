@@ -6,24 +6,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
-  renderTags(tags) {
-    // console.log(tags);
-    // debugger;
-    if (!tags || tags.length === 0) {
-      return null
-    } else {
-      return (
-        <div style={styles.articleInfo}>
-          {tags.map(tag => (
-            <div style={styles.tagBody}>{tag}</div>
-          ))}
-        </div>
-      )
-    }
-  }
   renderWriter(model) {
-    // console.log(tags);
-    // debugger;
     if (
       !model ||
       !model.description ||
@@ -33,6 +16,80 @@ class BlogIndex extends React.Component {
       return null
     } else {
       return <span style={styles.writer}>{model.description + "    |"}</span>
+    }
+  }
+  renderPost(node) {
+    const title = node.frontmatter.title || node.fields.slug
+    if(node.frontmatter.type == "photo"){
+      return (
+        <Link
+          style={{ boxShadow: `none`, color: "var(--titleText)" }}
+          to={node.fields.slug}
+        >
+        <article key={node.fields.slug}>
+          <header style={styles.header}>
+            <img src={node.frontmatter.description}/>
+          </header>
+          <p style={{
+            fontSize: 14,
+            color: "var(--contentText)",
+            fontWeight: "var(--light)",
+            marginTop: rhythm(1 / 3),
+          }}>
+            {title}
+          </p>
+          <div style={styles.articleLine} />
+        </article>
+        </Link>
+      )
+    }else{
+      return (
+        <article key={node.fields.slug}>
+          <header style={styles.header}>
+            <h4
+              style={{
+                marginBottom: rhythm(1 / 4),
+                fontSize: "var(--h3Size)",
+                fontWeight: "var(--medium)",
+              }}
+            >
+              <Link
+                style={{ boxShadow: `none`, color: "var(--titleText)" }}
+                to={node.fields.slug}
+              >
+                {title}
+              </Link>
+            </h4>
+            <div style={styles.articleInfo}>
+              {this.renderWriter(node.frontmatter)}
+              <small style={{ color: "var(--descText)" }}>
+                {node.frontmatter.date}
+              </small>
+              {
+                node.frontmatter.tags && node.frontmatter.tags.length>0 && node.frontmatter.tags.map(tag => (
+                  <div style={styles.tagBody}>{tag}</div>
+                ))
+              }
+            </div>
+          </header>
+          {node.frontmatter.type !== "reading" && (
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+                style={{
+                  fontSize: 14,
+                  color: "var(--contentText)",
+                  fontWeight: "var(--light)",
+                  marginTop: rhythm(1 / 3),
+                }}
+              />
+            </section>
+          )}
+          <div style={styles.articleLine} />
+        </article>
+      )
     }
   }
   render() {
@@ -45,52 +102,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
         {/*<Bio />*/}
         <div style={{ height: 80 }} />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h4
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                    fontSize: "var(--h3Size)",
-                    fontWeight: "var(--medium)",
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none`, color: "var(--titleText)" }}
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </h4>
-                <div style={styles.articleInfo}>
-                  {this.renderWriter(node.frontmatter)}
-                  <small style={{ color: "var(--descText)" }}>
-                    {node.frontmatter.date}
-                  </small>
-                  {this.renderTags(node.frontmatter.tags)}
-                </div>
-              </header>
-              {node.frontmatter.type !== "reading" && (
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                    style={{
-                      fontSize: 14,
-                      color: "var(--contentText)",
-                      fontWeight: "var(--light)",
-                      marginTop: rhythm(1 / 3),
-                    }}
-                  />
-                </section>
-              )}
-              <div style={styles.articleLine} />
-            </article>
-          )
-        })}
+        {posts.map(({ node }) => this.renderPost(node))}
       </Layout>
     )
   }
@@ -99,10 +111,17 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 const styles = {
+  header: {
+    marginTop: rhythm(1),
+    marginBottom: rhythm(1 / 4),
+  },
+
+
   articleInfo: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    flexWrap: 'wrap',
   },
   tagBody: {
     display: "flex",

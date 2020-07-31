@@ -30,7 +30,7 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
       fontSize: "var(--h4Size)",
       letterSpacing: 0,
       color: "var(--titleText)",
-      // marginTop:0,
+      marginTop: "0em !important",
       // marginBottom:1,
     },
     h5: {
@@ -82,6 +82,7 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     img: {
       maxWidth: "100%",
+      margin: "0em !important",
     },
   }
 }
