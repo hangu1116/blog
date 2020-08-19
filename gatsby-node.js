@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const photoPost = path.resolve(`./src/templates/photo-post.js`)
+  const designPost = path.resolve(`./src/templates/design-post.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
   const result = await graphql(
     `
@@ -54,7 +55,8 @@ exports.createPages = async ({ graphql, actions }) => {
         post.node.frontmatter.tags &&
         post.node.frontmatter.tags.includes("摄影")
           ? photoPost
-          : blogPost,
+          : (post.node.frontmatter.tags &&
+          post.node.frontmatter.tags.includes("design")? designPost : blogPost),
       context: {
         slug: post.node.fields.slug,
         previous,
