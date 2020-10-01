@@ -23,7 +23,7 @@ body {
     --h2Size: 1.6em;
     --h3Size: 1.32em;
     --h4Size: 1.22em;
-    --pSize: 1.16em;
+    --pSize: 1.14em;
     font-family: 'Noto Serif SC', serif;
 }
 body.dark {
@@ -49,6 +49,7 @@ body.dark {
     --h2Size: 1.6em;
     --h3Size: 1.32em;
     --h4Size: 1.22em;
+    --pSize: 1.14em;
     font-family: 'Noto Serif SC', serif;
 }
 @media only screen and (max-width: 640px) {

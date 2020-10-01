@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+        <article style={{marginTop: rhythm(10)}}>
           <header>
             <h3
               style={{

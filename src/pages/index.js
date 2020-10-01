@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
   }
   renderPost(node) {
     const title = node.frontmatter.title || node.fields.slug
-    if(node.frontmatter.type == "photo"){
+    if(node.frontmatter.type == "photo" && 0){
       return (
         <Link
           style={{ boxShadow: `none`, color: "var(--titleText)" }}
@@ -28,7 +28,9 @@ class BlogIndex extends React.Component {
         >
         <article key={node.fields.slug}>
           <header style={styles.header}>
-            <img src={node.frontmatter.description}/>
+            <div style={{height: '140px', width: '100%', overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
+              <img src={node.frontmatter.description} height={'auto'} width={'100%'}/>
+            </div>
           </header>
           <p style={{
             fontSize: 14,
