@@ -76,13 +76,14 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     blockquote: {
       borderLeftColor: "var(--lineColor)",
       marginTop: rhythm(1),
+      fontFamily: 'Noto Serif SC, serif'
     },
     "blockquote p": {
       fontSize: "0.84em !important",
     },
     img: {
       maxWidth: "100%",
-      margin: "0em !important",
+      margin: "1em 0em !important",
     },
   }
 }

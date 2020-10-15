@@ -158,7 +158,7 @@ class Layout extends React.Component {
           <footer
             style={{ color: "var(--descText)", fontSize: 14, marginTop: 80 }}
           >
-            © {new Date().getFullYear()}, Write by cyj
+            © {new Date().getFullYear()} cyj. All rights reserved.
           </footer>
         )}
       </div>

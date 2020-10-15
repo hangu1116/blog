@@ -1,12 +1,13 @@
 photo{
-    width: 86vw;
-    margin-left:7vw;
-    margin-right: 7vw;
+    width: 84vw;
+    margin-left:8vw;
+    margin-right: 8vw;
 }
 photo section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    line-height: var(--pHeight) !important;
 }
 @media only screen and (max-width: 640px) {
     photo{
@@ -20,14 +21,16 @@ photo section{
 }
 photo section p{
     margin-bottom: 3em;
-    color: #666666;
+    color: var(--contentText);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
     user-select: none;
     font-size: var(--pSize) !important;
-    font-family: 'Noto Serif SC', serif;
+    line-height: var(--pHeight) !important;
+    /*font-weight: var(--medium);*/
+    /*font-family: 'Noto Serif SC', serif;*/
 }
 photo section p img{
     align-items: center;
@@ -39,7 +42,7 @@ photo section p img{
 }
 
 body[class='dark'] photo section p{
-    color: #979797;
+    /*color: #979797;*/
 }
 
 

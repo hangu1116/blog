@@ -31,7 +31,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <Helmet title={title} />
-    <div>
+    <div style={{marginTop: rhythm(6)}}>
       <h4
         style={{
           fontSize: 24,
@@ -43,7 +43,7 @@ const TagsPage = ({
         {group.map(tag => (
           <p key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              # {getTagIcon(tag.fieldValue)} ({tag.totalCount})
+              # {getTagIcon(tag.fieldValue)}   {tag.totalCount}
             </Link>
           </p>
         ))}

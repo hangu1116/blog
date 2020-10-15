@@ -8,11 +8,12 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import { rhythm } from "../utils/typography"
 
 const InfoPage = () => (
   <Layout>
     <Helmet title={"About me"} />
-    <div>
+    <div  style={{marginTop: rhythm(6)}}>
       <h4
         style={{
           fontSize: 24,
@@ -21,8 +22,8 @@ const InfoPage = () => (
         About me
       </h4>
     </div>
-    <p>养花👨🏻‍🌾/画画👨🏻‍🎨/看书👨🏻‍💻，Emoji爱好者</p>
-    <p>Email:hangu1116@gmail.com</p>
+    <p>画画、摄影、写代码</p>
+    <p>————<br/><a href="mailto:hangu1116@gmail.com">Email:  hangu1116@gmail.com</a><br/>Loc. Shanghai, China</p>
   </Layout>
 )
 

@@ -24,6 +24,12 @@ body {
     --h3Size: 1.32em;
     --h4Size: 1.22em;
     --pSize: 1.14em;
+    /*lineHeight*/
+    --h1Size: 2em;
+    --h2Size: 1.6em;
+    --h3Size: 1.32em;
+    --h4Size: 1.22em;
+    --pHeight: 1.71em;
     font-family: 'Noto Serif SC', serif;
 }
 body.dark {
