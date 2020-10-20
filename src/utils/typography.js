@@ -9,23 +9,23 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     h1: {
       color: "var(--titleText)",
-      fontFamily: `PingFang, YaHei`,
+      fontFamily: `PingFang, YaHei, Montserrat, sans-serif`,
     },
     h2: {
-      fontFamily: `PingFang, YaHei`,
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
       fontSize: "var(--h2Size)",
       fontWeight: "var(--medium)",
       marginBottom: 2,
     },
     h3: {
-      fontFamily: `PingFang, YaHei`,
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
       fontWeight: "var(--medium)",
       fontSize: "var(--h3Size)",
-      marginTop: "1.25em !important",
-      marginBottom: "1.25em !important",
+      marginTop: "1.25em",
+      // marginBottom: "1.25em !important",
     },
     h4: {
-      fontFamily: "PingFang, YaHei",
+      fontFamily: `PingFang  SC, YaHei, Montserrat, sans-serif`,
       fontWeight: "var(--medium)",
       fontSize: "var(--h4Size)",
       letterSpacing: 0,
@@ -35,20 +35,22 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     h5: {
       color: "var(--titleText)",
-      fontFamily: `PingFang, YaHei`,
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
       // fontWeight:'400',
     },
     h6: {
       color: "var(--titleText)",
-      fontFamily: `PingFang, YaHei`,
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
       // fontWeight:'400',
     },
     body: {
       margin: 0,
       backgroundColor: "var(--bg)",
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
     },
     p: {
       color: "var(--contentText)",
+      fontFamily: `PingFang SC, YaHei, Montserrat, sans-serif`,
       // marginBlockEnd: '6px',
     },
     li: {

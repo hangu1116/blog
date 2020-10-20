@@ -5,8 +5,7 @@ photo{
 }
 photo section{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     line-height: var(--pHeight) !important;
 }
 @media only screen and (max-width: 640px) {
@@ -22,10 +21,6 @@ photo section{
 photo section p{
     margin-bottom: 3em;
     color: var(--contentText);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
     user-select: none;
     font-size: var(--pSize) !important;
     line-height: var(--pHeight) !important;
@@ -36,7 +31,7 @@ photo section p img{
     align-items: center;
     user-select: none;
     /*image在safari上变形*/
-    height: 100%;
+    height: auto;
     width:100%;
     object-fit: cover;
 }
@@ -46,18 +41,20 @@ body[class='dark'] photo section p{
 }
 
 
-photo section p:nth-child(2){
-    width: 30vw;
-    max-width: 380px;
-    margin-right: 4vw;
+photo section p:last-child, photo section p:nth-last-of-type(2), photo section p:nth-last-of-type(3){
+    font-size: var(--dSize) !important;
+    line-height: var(--dHeight) !important;
+    margin-bottom: 1em !important;
+    /*font-weight: var(--medium);*/
+    /*color: var(--descText);*/
 }
-@media only screen and (max-width: 640px) {
-    photo section p:nth-child(2){
-        width: 100%;
-        max-width: 100%;
-        margin-right: 0;
-    }
-}
-photo section p:nth-child(3){
-    flex:1;
-}
+/*@media only screen and (max-width: 640px) {*/
+    /*photo section p:nth-child(2){*/
+        /*width: 100%;*/
+        /*max-width: 100%;*/
+        /*margin-right: 0;*/
+    /*}*/
+/*}*/
+/*photo section p:nth-child(3){*/
+    /*flex:1;*/
+/*}*/

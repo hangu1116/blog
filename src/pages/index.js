@@ -15,34 +15,39 @@ class BlogIndex extends React.Component {
     ) {
       return null
     } else {
-      return <span style={styles.writer}>{model.description + "    |"}</span>
+      return <span style={styles.writer}>{model.description + " | "}</span>
     }
   }
   renderPost(node) {
     const title = node.frontmatter.title || node.fields.slug
-    if(node.frontmatter.type == "photo" && 0){
+    if(node.frontmatter.type == "photo"){
       return (
-        <Link
-          style={{ boxShadow: `none`, color: "var(--titleText)" }}
-          to={node.fields.slug}
-        >
         <article key={node.fields.slug}>
           <header style={styles.header}>
-            <div style={{height: '140px', width: '100%', overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
-              <img src={node.frontmatter.description} height={'auto'} width={'100%'}/>
+            <h4
+              style={{
+                marginBottom: rhythm(1 / 4),
+                fontSize: "var(--h3Size)",
+                fontWeight: "var(--light)",
+              }}
+            >
+              <Link
+                style={{ boxShadow: `none`, color: "var(--titleText)" }}
+                to={node.fields.slug}
+              >
+                {title}
+              </Link>
+            </h4>
+            <div style={styles.articleInfo}>
+              {
+                node.frontmatter.tags && node.frontmatter.tags.length>0 && node.frontmatter.tags.map(tag => (
+                  <div style={styles.tagBody}># {tag}</div>
+                ))
+              }
             </div>
           </header>
-          <p style={{
-            fontSize: 14,
-            color: "var(--contentText)",
-            fontWeight: "var(--light)",
-            marginTop: rhythm(1 / 3),
-          }}>
-            {title}
-          </p>
           <div style={styles.articleLine} />
         </article>
-        </Link>
       )
     }else{
       return (
@@ -52,7 +57,7 @@ class BlogIndex extends React.Component {
               style={{
                 marginBottom: rhythm(1 / 4),
                 fontSize: "var(--h3Size)",
-                fontWeight: "var(--medium)",
+                fontWeight: "var(--light)",
               }}
             >
               <Link
@@ -64,12 +69,15 @@ class BlogIndex extends React.Component {
             </h4>
             <div style={styles.articleInfo}>
               {this.renderWriter(node.frontmatter)}
-              <small style={{ color: "var(--descText)" }}>
+              <small style={{ fontSize: "var(--dSize)",
+                lineHeight: "var(--dHeight)",color: "var(--descText)" }}>
                 {node.frontmatter.date}
               </small>
+            </div>
+            <div style={styles.articleInfo}>
               {
                 node.frontmatter.tags && node.frontmatter.tags.length>0 && node.frontmatter.tags.map(tag => (
-                  <div style={styles.tagBody}>{tag}</div>
+                  <span style={styles.tagBody}># {tag}</span>
                 ))
               }
             </div>
@@ -127,20 +135,17 @@ const styles = {
   },
   tagBody: {
     display: "flex",
-    // flex:0,
-    marginLeft: 8,
+    marginRight: 14,
     alignItems: "center",
     height: 15,
-    fontSize: 12,
-    color: "var(--transportText)",
-    backgroundColor: "var(--descText)",
-    borderRadius: 10,
-    paddingLeft: 6,
-    paddingRight: 6,
+    fontSize: "var(--dSize)",
+    lineHeight: "var(--dHeight)",
+    color: "var(--descText)",
   },
   writer: {
     marginRight: 10,
-    fontSize: 12,
+    fontSize: "var(--dSize)",
+    lineHeight: "var(--dHeight)",
     color: "var(--descText)",
   },
   articleLine: {
@@ -170,7 +175,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "YYYY/MM/DD")
             title
             tags
             type

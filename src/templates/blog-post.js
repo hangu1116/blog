@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
       return (
         <div style={{ display: "flex", flexDirection: "row" }}>
           {tags.map(tag => (
-            <div style={styles.tagBody}>{tag}</div>
+            <div style={styles.tagBody}># {tag}</div>
           ))}
         </div>
       )
@@ -32,11 +32,13 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article style={{marginTop: rhythm(6)}}>
-          <header>
+          <header style={{
+            marginBottom: rhythm(2),
+          }}>
             <h3
               style={{
-                marginTop: rhythm(5),
-                marginBottom: 0,
+                marginTop: 0,
+                marginBottom: rhythm(0.5),
                 fontSize: 34,
                 fontWeight: "400",
                 color: "var(--titleText)",
@@ -44,34 +46,29 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h3>
-            {post.frontmatter.type === "reading" && (
-              <p style={styles.writer}>{post.frontmatter.description}</p>
-            )}
+            <p
+              style={{
+                // ...scale(-1 / 5),
+                display: `block`,
+                marginBottom: 0,
+                color: "var(--descText)",
+                fontSize: "var(--dSize)",
+                lineHeight: "var(--dHeight)",
+              }}
+            >
+              {post.frontmatter.type === "reading" && (post.frontmatter.description + " | ")} {post.frontmatter.date}
+            </p>
             <div style={styles.articleInfo}>
               {this.renderTags(post.frontmatter.tags)}
             </div>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-                color: "var(--descText)",
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
           </header>
-          {/*<MindMap*/}
-          {/*  nodes={nodes}*/}
-          {/*  connections={connections}*/}
-          {/*/>*/}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             style={{ color: "var(--contentText)" }}
           />
           <hr
             style={{
-              marginBottom: rhythm(1),
+              marginBottom: rhythm(2),
               color: "var(--lineColor)",
             }}
           />
@@ -121,21 +118,17 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    marginTop: rhythm(1),
-    marginBottom: rhythm(0.3),
   },
   tagBody: {
     display: "flex",
     // flex:0,
-    marginRight: 8,
+    marginRight: 14,
     alignItems: "center",
     height: 15,
-    fontSize: 12,
-    color: "var(--transportText)",
-    backgroundColor: "var(--descText)",
+    fontSize: "var(--dSize)",
+    lineHeight: "var(--dHeight)",
+    color: "var(--descText)",
     borderRadius: 4,
-    paddingLeft: 6,
-    paddingRight: 6,
   },
 }
 export const pageQuery = graphql`
@@ -152,7 +145,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         tags
-        date(formatString: "YYYY-MM-DD HH:mm")
+        date(formatString: "YYYY/MM/DD HH:mm")
         description
         type
       }
