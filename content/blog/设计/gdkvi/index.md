@@ -2,8 +2,8 @@
 lock: false
 title: vi of gdk7
 date: "2020-09-10T16:44:31.865Z"
-tags: ["design"]
-type: design
+tags: ["摄影"]
+type: photo
 ---
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gj91bn86hpj31g60u0npg.jpg)

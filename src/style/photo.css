@@ -39,15 +39,6 @@ photo section p img{
 body[class='dark'] photo section p{
     /*color: #979797;*/
 }
-
-
-photo section p:last-child{
-    font-size: var(--dSize) !important;
-    line-height: var(--dHeight) !important;
-    margin-bottom: 1em !important;
-    /*font-weight: var(--medium);*/
-    /*color: var(--descText);*/
-}
 /*@media only screen and (max-width: 640px) {*/
     /*photo section p:nth-child(2){*/
         /*width: 100%;*/
