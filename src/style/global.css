@@ -14,8 +14,8 @@ body {
     transition: color 0.2s ease-out, background 0.2s ease-out;
 
     /*weight*/
-    --bold:700;
-    --medium: 500;
+    --bold:bold;
+    --medium: medium;
     --light: 400;
 
     /*size*/
@@ -50,8 +50,8 @@ body.dark {
     transition: color 0.2s ease-out, background 0.2s ease-out;
 
     /*weight*/
-    --bold:600;
-    --medium: 400;
+    --bold:bold;
+    --medium: medium;
     --light:300;
 
     /*size*/

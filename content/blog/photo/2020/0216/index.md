@@ -1,5 +1,5 @@
 ---
-lock: false
+lock: true
 title: 2020/02/16
 date: "2020-02-16T10:40:32.169Z"
 tags: ["摄影"]

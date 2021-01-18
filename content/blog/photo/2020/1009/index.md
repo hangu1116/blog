@@ -20,8 +20,4 @@ Fishing boat
    
   
 山东, 威海, 荣成成山头  
-庚子鼠年 - 八月廿三  
-
-————  
-
-Chengshantou, Weihai, Shandong, 2020/10/09.
+2020/10/09.

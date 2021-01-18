@@ -1,5 +1,5 @@
 ---
-lock: false
+lock: true
 title: 2020/08/30
 date: "2020-08-30T18:29:32.169Z"
 tags: ["摄影"]

@@ -14,16 +14,8 @@ const InfoPage = () => (
   <Layout>
     <Helmet title={"About me"} />
     <div  style={{marginTop: rhythm(6)}}>
-      <h4
-        style={{
-          fontSize: 24,
-        }}
-      >
-        About me
-      </h4>
     </div>
-    <p>画画、摄影、写代码</p>
-    <p>————<br/><a href="mailto:hangu1116@gmail.com">Email:  hangu1116@gmail.com</a><br/>Loc. Shanghai, China</p>
+    <p><a href="mailto:hangu1116@gmail.com">Email:  hangu1116@gmail.com</a><br/>Loc. Shanghai, China</p>
   </Layout>
 )
 

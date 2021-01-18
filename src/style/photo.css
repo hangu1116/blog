@@ -41,7 +41,7 @@ body[class='dark'] photo section p{
 }
 
 
-photo section p:last-child, photo section p:nth-last-of-type(2), photo section p:nth-last-of-type(3){
+photo section p:last-child{
     font-size: var(--dSize) !important;
     line-height: var(--dHeight) !important;
     margin-bottom: 1em !important;
