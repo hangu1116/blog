@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: post.node.fields.slug,
       component:
         post.node.frontmatter.tags &&
-        post.node.frontmatter.tags.includes("摄影")
+        (post.node.frontmatter.tags.includes("摄影")||post.node.frontmatter.tags.includes("vi"))
           ? photoPost
           : blogPost,
       context: {
