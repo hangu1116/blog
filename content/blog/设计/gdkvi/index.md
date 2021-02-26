@@ -1,14 +1,18 @@
 ---
 lock: false
 title: vi of gdk7
-date: "2020-09-10T16:44:31.865Z"
-tags: ["摄影"]
+date: "2020-12-10T16:44:31.865Z"
+tags: ["vi"]
 type: photo
 ---
 
-![](https://s3.ax1x.com/2021/01/24/sHecxP.gif)
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxl84vj97j31g60u04r5.jpg)
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmwus32tmvj31e00u0npg.jpg)
-![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxriy9cg9j31e00u01kz.jpg)
+![](https://s3.ax1x.com/2021/02/10/y0Ebxx.png)
+![](https://s3.ax1x.com/2021/02/15/yy7wd0.png)
 
-关于GDK7计算机调试套件的vi设计
+**钟馗**  
+夫钟馗者，姓钟名馗，古有雍州终南人也，生于终南而居于终南，文武全修，豹头环眼，铁面虬鬓，相貌奇异，经纶满腹，刚正不阿，不惧邪祟，待人正直、肝胆相照、获贡士首状元不及，抗辩无果，报国无门，舍生取义，怒撞殿柱亡，皇以状元职葬之，托梦驱鬼愈唐明皇之疾，封‘赐福镇宅圣君’，诏告天下，遍悬《钟馗赐福镇宅图》护福祛邪魅以佑平安。故名噪天下也！
+
+![](https://s3.ax1x.com/2021/02/06/yYeiRO.png)
+![](https://s3.ax1x.com/2021/02/10/y0kywQ.png)
+![](https://s3.ax1x.com/2021/02/09/ydxq4U.png)
+GDK7计算机调试套件的vi设计

@@ -85,7 +85,7 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }, options) => {
     },
     img: {
       maxWidth: "100%",
-      margin: "1em 0em !important",
+      margin: "0.4em 0em !important",
     },
   }
 }
