@@ -24,7 +24,7 @@ body {
     --h3Size: 1.32em;
     --h4Size: 1.22em;
     --pSize: 1.14em;
-    --dSize: 0.76em !important;
+    --dSize: 0.84rem !important;
 
     /*lineHeight*/
     --h1Size: 2em;
@@ -34,7 +34,7 @@ body {
     --pHeight: 1.71em;
     --dHeight: 1.60em !important;
 
-    font-family: 'Noto Serif SC', serif;
+    /*font-family: 'Noto Serif SC', serif !important;*/
 }
 body.dark {
     /*color*/
@@ -60,7 +60,7 @@ body.dark {
     --h3Size: 1.32em;
     --h4Size: 1.22em;
     --pSize: 1.14em;
-    font-family: 'Noto Serif SC', serif;
+    /*font-family: 'Noto Serif SC', serif;*/
 }
 @media only screen and (max-width: 640px) {
     .themeIcon{

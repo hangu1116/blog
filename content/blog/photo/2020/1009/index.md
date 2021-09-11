@@ -5,11 +5,7 @@ date: "2020-10-09T06:10:32.169Z"
 tags: ["摄影"]
 type: photo
 ---
-
 ![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gjsfsm8j12j31hc0u0x6r.jpg)
-
-海上日出  
-Sunrise at sea
 
 
 

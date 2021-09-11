@@ -1,0 +1,43 @@
+.photoCard-container{
+    margin-top: 12rem;
+
+    display: flex;
+    justify-content: flex-start;
+}
+.photoCard-domain{
+    width: 52rem;
+
+    font-size: var(--dSize);
+    color: var(--contentText);
+    margin-bottom: 8rem;
+    /*font-family: 'Noto Serif SC', serif !important;*/
+}
+.photoCard-imgbody{
+    padding-left: 20rem;
+}
+.photoCard-image{
+    width: 100%;
+}
+.photoCard-title {
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.photoCard-name {
+    font-weight: bold;
+}
+
+.photoCard-tocbody{
+    margin-left: 7rem;
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.photoCard-tocitem{
+    font-size: var(--dSize);
+    color: var(--contentText);
+    margin-bottom: 0.4rem;
+}
